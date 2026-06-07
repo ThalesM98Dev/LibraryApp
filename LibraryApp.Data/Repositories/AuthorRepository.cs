@@ -137,8 +137,8 @@ public class AuthorRepository : IAuthorRepository
 
     public async Task UpdateAsync(int authorId, UpdateAuthorCommand cmd, CancellationToken ct = default)
     {
-        SqlConnection connection = null;
-        SqlTransaction transaction = null;
+        SqlConnection? connection = null;
+        SqlTransaction? transaction = null;
 
         try
         {

@@ -108,32 +108,4 @@ public class MemberService : IMemberService
 
         return updatedMember;
     }
-
-    public async Task DeleteAsync(int memberId, CancellationToken ct = default)
-    {
-        var member = await _memberRepo.GetByIdAsync(memberId, ct)
-            ?? throw new NotFoundException("Member", memberId);
-
-        bool hasActiveLoans = await _ctx.Loans
-            .AnyAsync(l => l.MemberId == memberId && l.ReturnDate == null, ct);
-
-        if (hasActiveLoans)
-            throw new ConflictException(
-                $"Member ID {memberId} has active loans and cannot be deleted.");
-
-        await _uow.BeginTransactionAsync(ct);
-        try
-        {
-            await _memberRepo.DeleteAsync(memberId, ct);
-            await _uow.CommitTransactionAsync(ct);
-
-            _logger.LogInformation(
-                "Member deleted: MemberId={MemberId}", memberId);
-        }
-        catch
-        {
-            await _uow.RollbackTransactionAsync(ct);
-            throw;
-        }
-    }
 }

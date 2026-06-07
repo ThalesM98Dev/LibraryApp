@@ -5070,3 +5070,1066 @@ Error Number:547,State:0,Class:16
 2026-06-07 14:31:50.704 +03:00 [INF] Executed action BooksController.Search (LibraryApp.Api) in 4.219ms
 2026-06-07 14:31:50.704 +03:00 [INF] HTTP GET /api/books responded 200 in 4.6722 ms
 2026-06-07 14:31:50.707 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - 200 null application/json; charset=utf-8 7.1046ms
+2026-06-07 15:03:18.557 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - null null
+2026-06-07 15:03:18.558 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:18.558 +03:00 [INF] HTTP OPTIONS /api/loans/active responded 204 in 0.2555 ms
+2026-06-07 15:03:18.558 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - 204 null null 1.0683ms
+2026-06-07 15:03:18.566 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/loans/active - application/json null
+2026-06-07 15:03:18.566 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:18.566 +03:00 [INF] Route matched with {action = "GetActive", controller = "Loans"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActive(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.LoansController (LibraryApp.Api).
+2026-06-07 15:03:20.055 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.ActiveLoanDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:03:20.056 +03:00 [INF] Executed action LibraryApp.Api.Controllers.LoansController.GetActive (LibraryApp.Api) in 1489.4543ms
+2026-06-07 15:03:20.056 +03:00 [INF] HTTP GET /api/loans/active responded 200 in 1489.7974 ms
+2026-06-07 15:03:20.056 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/loans/active - 200 null application/json; charset=utf-8 1490.1064ms
+2026-06-07 15:03:26.667 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/authors - null null
+2026-06-07 15:03:26.668 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:26.668 +03:00 [INF] HTTP OPTIONS /api/authors responded 204 in 0.1119 ms
+2026-06-07 15:03:26.668 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/authors - 204 null null 0.952ms
+2026-06-07 15:03:26.669 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/categories - null null
+2026-06-07 15:03:26.669 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:26.669 +03:00 [INF] HTTP OPTIONS /api/categories responded 204 in 0.0932 ms
+2026-06-07 15:03:26.669 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/categories - 204 null null 0.627ms
+2026-06-07 15:03:26.670 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/books?page=1&pageSize=20 - null null
+2026-06-07 15:03:26.670 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:26.671 +03:00 [INF] HTTP OPTIONS /api/books responded 204 in 0.0960 ms
+2026-06-07 15:03:26.671 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/books?page=1&pageSize=20 - 204 null null 0.3376ms
+2026-06-07 15:03:26.676 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/authors - application/json null
+2026-06-07 15:03:26.676 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:26.676 +03:00 [INF] Route matched with {action = "GetAll", controller = "Authors"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.AuthorsController (LibraryApp.Api).
+2026-06-07 15:03:26.677 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/categories - application/json null
+2026-06-07 15:03:26.677 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - application/json null
+2026-06-07 15:03:26.677 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:26.677 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:26.677 +03:00 [INF] Route matched with {action = "GetAll", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.CategoriesController (LibraryApp.Api).
+2026-06-07 15:03:26.677 +03:00 [INF] Route matched with {action = "Search", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(BookSearchQuery, System.Threading.CancellationToken) on controller BooksController (LibraryApp.Api).
+2026-06-07 15:03:26.682 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.AuthorDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:03:26.682 +03:00 [INF] Executed action LibraryApp.Api.Controllers.AuthorsController.GetAll (LibraryApp.Api) in 6.206ms
+2026-06-07 15:03:26.682 +03:00 [INF] HTTP GET /api/authors responded 200 in 6.5404 ms
+2026-06-07 15:03:26.683 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/authors - 200 null application/json; charset=utf-8 6.8909ms
+2026-06-07 15:03:26.694 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], LibraryApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:03:26.694 +03:00 [INF] Executed action LibraryApp.Api.Controllers.CategoriesController.GetAll (LibraryApp.Api) in 16.3001ms
+2026-06-07 15:03:26.694 +03:00 [INF] HTTP GET /api/categories responded 200 in 16.7029 ms
+2026-06-07 15:03:26.694 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/categories - 200 null application/json; charset=utf-8 17.0199ms
+2026-06-07 15:03:26.721 +03:00 [INF] Executing OkObjectResult, writing value of type 'PagedResult`1[[BookDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:03:26.721 +03:00 [INF] Executed action BooksController.Search (LibraryApp.Api) in 43.886ms
+2026-06-07 15:03:26.722 +03:00 [INF] HTTP GET /api/books responded 200 in 44.2082 ms
+2026-06-07 15:03:26.722 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - 200 null application/json; charset=utf-8 44.4491ms
+2026-06-07 15:03:27.973 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members - null null
+2026-06-07 15:03:27.974 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:27.974 +03:00 [INF] HTTP OPTIONS /api/members responded 204 in 0.3763 ms
+2026-06-07 15:03:27.974 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members - 204 null null 0.8988ms
+2026-06-07 15:03:27.979 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:03:27.980 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:27.980 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:03:27.985 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:03:27.985 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 4.8856ms
+2026-06-07 15:03:27.985 +03:00 [INF] HTTP GET /api/members responded 200 in 5.4299 ms
+2026-06-07 15:03:27.985 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 5.9171ms
+2026-06-07 15:03:29.365 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members/2 - null null
+2026-06-07 15:03:29.365 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:29.365 +03:00 [INF] HTTP OPTIONS /api/members/2 responded 204 in 0.1292 ms
+2026-06-07 15:03:29.365 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members/2 - 204 null null 0.4224ms
+2026-06-07 15:03:29.370 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members/2 - application/json null
+2026-06-07 15:03:29.370 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:29.370 +03:00 [INF] Route matched with {action = "GetById", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:03:29.374 +03:00 [INF] Executing OkObjectResult, writing value of type 'LibraryApp.Core.DTOs.MemberDto'.
+2026-06-07 15:03:29.375 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetById (LibraryApp.Api) in 4.4916ms
+2026-06-07 15:03:29.375 +03:00 [INF] HTTP GET /api/members/2 responded 200 in 4.9647 ms
+2026-06-07 15:03:29.375 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members/2 - 200 null application/json; charset=utf-8 5.2508ms
+2026-06-07 15:03:32.156 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:03:32.157 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:32.157 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:03:32.159 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:03:32.159 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 2.1598ms
+2026-06-07 15:03:32.159 +03:00 [INF] HTTP GET /api/members responded 200 in 2.7612 ms
+2026-06-07 15:03:32.160 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 3ms
+2026-06-07 15:03:33.327 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/authors - null null
+2026-06-07 15:03:33.327 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:33.328 +03:00 [INF] HTTP OPTIONS /api/authors responded 204 in 0.5810 ms
+2026-06-07 15:03:33.328 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/authors - 204 null null 0.9174ms
+2026-06-07 15:03:33.328 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/categories - null null
+2026-06-07 15:03:33.329 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:33.329 +03:00 [INF] HTTP OPTIONS /api/categories responded 204 in 0.1114 ms
+2026-06-07 15:03:33.329 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/categories - 204 null null 0.3849ms
+2026-06-07 15:03:33.329 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/books?page=1&pageSize=20 - null null
+2026-06-07 15:03:33.329 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:33.330 +03:00 [INF] HTTP OPTIONS /api/books responded 204 in 0.2913 ms
+2026-06-07 15:03:33.330 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/books?page=1&pageSize=20 - 204 null null 0.7475ms
+2026-06-07 15:03:33.337 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/authors - application/json null
+2026-06-07 15:03:33.338 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/categories - application/json null
+2026-06-07 15:03:33.338 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:33.338 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:33.338 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - application/json null
+2026-06-07 15:03:33.338 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:33.338 +03:00 [INF] Route matched with {action = "GetAll", controller = "Authors"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.AuthorsController (LibraryApp.Api).
+2026-06-07 15:03:33.338 +03:00 [INF] Route matched with {action = "Search", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(BookSearchQuery, System.Threading.CancellationToken) on controller BooksController (LibraryApp.Api).
+2026-06-07 15:03:33.338 +03:00 [INF] Route matched with {action = "GetAll", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.CategoriesController (LibraryApp.Api).
+2026-06-07 15:03:33.340 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.AuthorDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:03:33.340 +03:00 [INF] Executed action LibraryApp.Api.Controllers.AuthorsController.GetAll (LibraryApp.Api) in 1.8782ms
+2026-06-07 15:03:33.340 +03:00 [INF] HTTP GET /api/authors responded 200 in 2.2908 ms
+2026-06-07 15:03:33.340 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/authors - 200 null application/json; charset=utf-8 2.7861ms
+2026-06-07 15:03:33.342 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], LibraryApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:03:33.342 +03:00 [INF] Executed action LibraryApp.Api.Controllers.CategoriesController.GetAll (LibraryApp.Api) in 3.5922ms
+2026-06-07 15:03:33.342 +03:00 [INF] HTTP GET /api/categories responded 200 in 4.3508 ms
+2026-06-07 15:03:33.342 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/categories - 200 null application/json; charset=utf-8 4.6053ms
+2026-06-07 15:03:33.347 +03:00 [INF] Executing OkObjectResult, writing value of type 'PagedResult`1[[BookDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:03:33.349 +03:00 [INF] Executed action BooksController.Search (LibraryApp.Api) in 10.8513ms
+2026-06-07 15:03:33.349 +03:00 [INF] HTTP GET /api/books responded 200 in 11.1247 ms
+2026-06-07 15:03:33.349 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - 200 null application/json; charset=utf-8 11.4213ms
+2026-06-07 15:03:56.306 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/books/8 - null null
+2026-06-07 15:03:56.307 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:56.307 +03:00 [INF] HTTP OPTIONS /api/books/8 responded 204 in 0.0982 ms
+2026-06-07 15:03:56.307 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/books/8 - 204 null null 0.3683ms
+2026-06-07 15:03:56.312 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/books/8 - application/json null
+2026-06-07 15:03:56.312 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:56.312 +03:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, System.Threading.CancellationToken) on controller BooksController (LibraryApp.Api).
+2026-06-07 15:03:56.333 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookDto'.
+2026-06-07 15:03:56.333 +03:00 [INF] Executed action BooksController.GetById (LibraryApp.Api) in 20.8568ms
+2026-06-07 15:03:56.334 +03:00 [INF] HTTP GET /api/books/8 responded 200 in 21.1719 ms
+2026-06-07 15:03:56.334 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/books/8 - 200 null application/json; charset=utf-8 21.443ms
+2026-06-07 15:03:58.178 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/authors - null null
+2026-06-07 15:03:58.179 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:58.179 +03:00 [INF] HTTP OPTIONS /api/authors responded 204 in 0.1038 ms
+2026-06-07 15:03:58.179 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/categories - null null
+2026-06-07 15:03:58.179 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/authors - 204 null null 0.3624ms
+2026-06-07 15:03:58.179 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:58.179 +03:00 [INF] HTTP OPTIONS /api/categories responded 204 in 0.0806 ms
+2026-06-07 15:03:58.179 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/categories - 204 null null 0.2655ms
+2026-06-07 15:03:58.180 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/books/8 - application/json null
+2026-06-07 15:03:58.181 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:58.181 +03:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, System.Threading.CancellationToken) on controller BooksController (LibraryApp.Api).
+2026-06-07 15:03:58.183 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookDto'.
+2026-06-07 15:03:58.183 +03:00 [INF] Executed action BooksController.GetById (LibraryApp.Api) in 2.3046ms
+2026-06-07 15:03:58.183 +03:00 [INF] HTTP GET /api/books/8 responded 200 in 2.6067 ms
+2026-06-07 15:03:58.183 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/books/8 - 200 null application/json; charset=utf-8 2.9441ms
+2026-06-07 15:03:58.186 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/categories - application/json null
+2026-06-07 15:03:58.186 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:58.187 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/authors - application/json null
+2026-06-07 15:03:58.187 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:03:58.187 +03:00 [INF] Route matched with {action = "GetAll", controller = "Authors"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.AuthorsController (LibraryApp.Api).
+2026-06-07 15:03:58.187 +03:00 [INF] Route matched with {action = "GetAll", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.CategoriesController (LibraryApp.Api).
+2026-06-07 15:03:58.189 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], LibraryApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:03:58.189 +03:00 [INF] Executed action LibraryApp.Api.Controllers.CategoriesController.GetAll (LibraryApp.Api) in 1.6596ms
+2026-06-07 15:03:58.189 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.AuthorDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:03:58.189 +03:00 [INF] HTTP GET /api/categories responded 200 in 3.4855 ms
+2026-06-07 15:03:58.189 +03:00 [INF] Executed action LibraryApp.Api.Controllers.AuthorsController.GetAll (LibraryApp.Api) in 1.9153ms
+2026-06-07 15:03:58.190 +03:00 [INF] HTTP GET /api/authors responded 200 in 2.4901 ms
+2026-06-07 15:03:58.190 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/categories - 200 null application/json; charset=utf-8 4.1575ms
+2026-06-07 15:03:58.190 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/authors - 200 null application/json; charset=utf-8 2.7598ms
+2026-06-07 15:04:13.596 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/books/8 - null null
+2026-06-07 15:04:13.596 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:04:13.596 +03:00 [INF] HTTP OPTIONS /api/books/8 responded 204 in 0.1020 ms
+2026-06-07 15:04:13.597 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/books/8 - 204 null null 0.8699ms
+2026-06-07 15:04:13.604 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/books/8 - application/json null
+2026-06-07 15:04:13.604 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:04:13.604 +03:00 [INF] Route matched with {action = "GetById", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, System.Threading.CancellationToken) on controller BooksController (LibraryApp.Api).
+2026-06-07 15:04:13.606 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookDto'.
+2026-06-07 15:04:13.607 +03:00 [INF] Executed action BooksController.GetById (LibraryApp.Api) in 2.3842ms
+2026-06-07 15:04:13.607 +03:00 [INF] HTTP GET /api/books/8 responded 200 in 2.7289 ms
+2026-06-07 15:04:13.607 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/books/8 - 200 null application/json; charset=utf-8 3.047ms
+2026-06-07 15:04:16.655 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - null null
+2026-06-07 15:04:16.655 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:04:16.655 +03:00 [INF] HTTP OPTIONS /api/loans/active responded 204 in 0.2024 ms
+2026-06-07 15:04:16.655 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - 204 null null 0.5015ms
+2026-06-07 15:04:16.660 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/loans/active - application/json null
+2026-06-07 15:04:16.660 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:04:16.660 +03:00 [INF] Route matched with {action = "GetActive", controller = "Loans"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActive(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.LoansController (LibraryApp.Api).
+2026-06-07 15:04:16.662 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.ActiveLoanDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:04:16.662 +03:00 [INF] Executed action LibraryApp.Api.Controllers.LoansController.GetActive (LibraryApp.Api) in 2.0083ms
+2026-06-07 15:04:16.662 +03:00 [INF] HTTP GET /api/loans/active responded 200 in 2.5604 ms
+2026-06-07 15:04:16.663 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/loans/active - 200 null application/json; charset=utf-8 2.8586ms
+2026-06-07 15:05:38.861 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/loans/active - application/json null
+2026-06-07 15:05:38.861 +03:00 [INF] Route matched with {action = "GetActive", controller = "Loans"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActive(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.LoansController (LibraryApp.Api).
+2026-06-07 15:05:38.863 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.ActiveLoanDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:05:38.863 +03:00 [INF] Executed action LibraryApp.Api.Controllers.LoansController.GetActive (LibraryApp.Api) in 1.8548ms
+2026-06-07 15:05:38.863 +03:00 [INF] HTTP GET /api/loans/active responded 200 in 2.0980 ms
+2026-06-07 15:05:38.863 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/loans/active - 200 null application/json; charset=utf-8 2.3737ms
+2026-06-07 15:05:39.303 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - null null
+2026-06-07 15:05:39.303 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:05:39.303 +03:00 [INF] HTTP OPTIONS /api/loans/active responded 204 in 0.0856 ms
+2026-06-07 15:05:39.304 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - 204 null null 0.3454ms
+2026-06-07 15:05:39.307 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/loans/active - application/json null
+2026-06-07 15:05:39.307 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:05:39.307 +03:00 [INF] Route matched with {action = "GetActive", controller = "Loans"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActive(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.LoansController (LibraryApp.Api).
+2026-06-07 15:05:39.309 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.ActiveLoanDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:05:39.309 +03:00 [INF] Executed action LibraryApp.Api.Controllers.LoansController.GetActive (LibraryApp.Api) in 2.0239ms
+2026-06-07 15:05:39.310 +03:00 [INF] HTTP GET /api/loans/active responded 200 in 2.4744 ms
+2026-06-07 15:05:39.310 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/loans/active - 200 null application/json; charset=utf-8 2.7554ms
+2026-06-07 15:05:54.043 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/loans/active - application/json null
+2026-06-07 15:05:54.043 +03:00 [INF] Route matched with {action = "GetActive", controller = "Loans"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActive(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.LoansController (LibraryApp.Api).
+2026-06-07 15:05:54.047 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.ActiveLoanDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:05:54.047 +03:00 [INF] Executed action LibraryApp.Api.Controllers.LoansController.GetActive (LibraryApp.Api) in 3.4615ms
+2026-06-07 15:05:54.047 +03:00 [INF] HTTP GET /api/loans/active responded 200 in 3.7100 ms
+2026-06-07 15:05:54.047 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/loans/active - 200 null application/json; charset=utf-8 4.0897ms
+2026-06-07 15:05:54.707 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - null null
+2026-06-07 15:05:54.708 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:05:54.708 +03:00 [INF] HTTP OPTIONS /api/loans/active responded 204 in 0.0842 ms
+2026-06-07 15:05:54.708 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - 204 null null 0.6297ms
+2026-06-07 15:05:54.716 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/loans/active - application/json null
+2026-06-07 15:05:54.717 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:05:54.717 +03:00 [INF] Route matched with {action = "GetActive", controller = "Loans"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActive(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.LoansController (LibraryApp.Api).
+2026-06-07 15:05:54.719 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.ActiveLoanDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:05:54.719 +03:00 [INF] Executed action LibraryApp.Api.Controllers.LoansController.GetActive (LibraryApp.Api) in 2.1098ms
+2026-06-07 15:05:54.719 +03:00 [INF] HTTP GET /api/loans/active responded 200 in 2.4280 ms
+2026-06-07 15:05:54.719 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/loans/active - 200 null application/json; charset=utf-8 2.8688ms
+2026-06-07 15:06:06.074 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/authors - null null
+2026-06-07 15:06:06.074 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:06:06.074 +03:00 [INF] HTTP OPTIONS /api/authors responded 204 in 0.0981 ms
+2026-06-07 15:06:06.074 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/authors - 204 null null 0.5102ms
+2026-06-07 15:06:06.075 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/categories - null null
+2026-06-07 15:06:06.075 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:06:06.075 +03:00 [INF] HTTP OPTIONS /api/categories responded 204 in 0.0906 ms
+2026-06-07 15:06:06.075 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/categories - 204 null null 0.3664ms
+2026-06-07 15:06:06.076 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/books?page=1&pageSize=20 - null null
+2026-06-07 15:06:06.076 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:06:06.076 +03:00 [INF] HTTP OPTIONS /api/books responded 204 in 0.0729 ms
+2026-06-07 15:06:06.076 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/books?page=1&pageSize=20 - 204 null null 0.2431ms
+2026-06-07 15:06:06.083 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/authors - application/json null
+2026-06-07 15:06:06.084 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:06:06.084 +03:00 [INF] Route matched with {action = "GetAll", controller = "Authors"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.AuthorsController (LibraryApp.Api).
+2026-06-07 15:06:06.084 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/categories - application/json null
+2026-06-07 15:06:06.084 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:06:06.084 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - application/json null
+2026-06-07 15:06:06.084 +03:00 [INF] Route matched with {action = "GetAll", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.CategoriesController (LibraryApp.Api).
+2026-06-07 15:06:06.084 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:06:06.085 +03:00 [INF] Route matched with {action = "Search", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(BookSearchQuery, System.Threading.CancellationToken) on controller BooksController (LibraryApp.Api).
+2026-06-07 15:06:06.086 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], LibraryApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:06:06.086 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.AuthorDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:06:06.086 +03:00 [INF] Executed action LibraryApp.Api.Controllers.CategoriesController.GetAll (LibraryApp.Api) in 1.5058ms
+2026-06-07 15:06:06.086 +03:00 [INF] Executed action LibraryApp.Api.Controllers.AuthorsController.GetAll (LibraryApp.Api) in 2.3065ms
+2026-06-07 15:06:06.086 +03:00 [INF] HTTP GET /api/categories responded 200 in 1.9770 ms
+2026-06-07 15:06:06.086 +03:00 [INF] HTTP GET /api/authors responded 200 in 2.7257 ms
+2026-06-07 15:06:06.087 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/categories - 200 null application/json; charset=utf-8 2.773ms
+2026-06-07 15:06:06.087 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/authors - 200 null application/json; charset=utf-8 3.5416ms
+2026-06-07 15:06:06.090 +03:00 [INF] Executing OkObjectResult, writing value of type 'PagedResult`1[[BookDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:06:06.090 +03:00 [INF] Executed action BooksController.Search (LibraryApp.Api) in 5.4557ms
+2026-06-07 15:06:06.090 +03:00 [INF] HTTP GET /api/books responded 200 in 5.8541 ms
+2026-06-07 15:06:06.090 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - 200 null application/json; charset=utf-8 6.085ms
+2026-06-07 15:06:07.983 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/authors - application/json null
+2026-06-07 15:06:07.983 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:06:07.983 +03:00 [INF] Route matched with {action = "GetAll", controller = "Authors"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.AuthorsController (LibraryApp.Api).
+2026-06-07 15:06:07.983 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/categories - application/json null
+2026-06-07 15:06:07.984 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:06:07.984 +03:00 [INF] Route matched with {action = "GetAll", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.CategoriesController (LibraryApp.Api).
+2026-06-07 15:06:07.985 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.AuthorDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:06:07.985 +03:00 [INF] Executed action LibraryApp.Api.Controllers.AuthorsController.GetAll (LibraryApp.Api) in 1.5925ms
+2026-06-07 15:06:07.985 +03:00 [INF] HTTP GET /api/authors responded 200 in 1.9459 ms
+2026-06-07 15:06:07.985 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], LibraryApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:06:07.985 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/authors - 200 null application/json; charset=utf-8 2.2062ms
+2026-06-07 15:06:07.985 +03:00 [INF] Executed action LibraryApp.Api.Controllers.CategoriesController.GetAll (LibraryApp.Api) in 1.3445ms
+2026-06-07 15:06:07.985 +03:00 [INF] HTTP GET /api/categories responded 200 in 1.5688 ms
+2026-06-07 15:06:07.985 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/categories - 200 null application/json; charset=utf-8 1.7422ms
+2026-06-07 15:06:14.178 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members - null null
+2026-06-07 15:06:14.179 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:06:14.179 +03:00 [INF] HTTP OPTIONS /api/members responded 204 in 0.0854 ms
+2026-06-07 15:06:14.179 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members - 204 null null 0.3198ms
+2026-06-07 15:06:14.183 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:06:14.183 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:06:14.183 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:06:14.185 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:06:14.186 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 2.0022ms
+2026-06-07 15:06:14.186 +03:00 [INF] HTTP GET /api/members responded 200 in 2.2221 ms
+2026-06-07 15:06:14.186 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 2.46ms
+2026-06-07 15:06:24.029 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members/1 - null null
+2026-06-07 15:06:24.029 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:06:24.029 +03:00 [INF] HTTP OPTIONS /api/members/1 responded 204 in 0.0671 ms
+2026-06-07 15:06:24.029 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members/1 - 204 null null 0.2926ms
+2026-06-07 15:06:24.033 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5112/api/members/1 - application/json null
+2026-06-07 15:06:24.033 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:06:24.039 +03:00 [INF] Route matched with {action = "Delete", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32, System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:06:24.056 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.Delete (LibraryApp.Api) in 17.4976ms
+2026-06-07 15:06:24.057 +03:00 [ERR] HTTP DELETE /api/members/1 responded 500 in 23.4031 ms
+ConflictException: Member ID 1 has active loans and cannot be deleted.
+   at LibraryApp.Data.Services.MemberService.DeleteAsync(Int32 memberId, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\Services\MemberService.cs:line 121
+   at LibraryApp.Api.Controllers.MembersController.Delete(Int32 id, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Api\Controllers\MembersController.cs:line 68
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-07 15:06:24.094 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5112/api/members/1 - 409 null application/problem+json 61.2309ms
+2026-06-07 15:06:34.088 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members/1 - null null
+2026-06-07 15:06:34.088 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:06:34.088 +03:00 [INF] HTTP OPTIONS /api/members/1 responded 204 in 0.0779 ms
+2026-06-07 15:06:34.088 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members/1 - 204 null null 0.374ms
+2026-06-07 15:06:34.093 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5112/api/members/1 - application/json null
+2026-06-07 15:06:34.093 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:06:34.093 +03:00 [INF] Route matched with {action = "Delete", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32, System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:06:34.098 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.Delete (LibraryApp.Api) in 4.9433ms
+2026-06-07 15:06:34.099 +03:00 [ERR] HTTP DELETE /api/members/1 responded 500 in 5.4914 ms
+ConflictException: Member ID 1 has active loans and cannot be deleted.
+   at LibraryApp.Data.Services.MemberService.DeleteAsync(Int32 memberId, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\Services\MemberService.cs:line 121
+   at LibraryApp.Api.Controllers.MembersController.Delete(Int32 id, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Api\Controllers\MembersController.cs:line 68
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-07 15:06:34.103 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5112/api/members/1 - 409 null application/problem+json 9.978ms
+2026-06-07 15:10:36.475 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:10:36.475 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:10:36.477 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:10:36.477 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 2.2282ms
+2026-06-07 15:10:36.478 +03:00 [INF] HTTP GET /api/members responded 200 in 2.4818 ms
+2026-06-07 15:10:36.478 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 2.774ms
+2026-06-07 15:10:37.498 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members - null null
+2026-06-07 15:10:37.498 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:10:37.498 +03:00 [INF] HTTP OPTIONS /api/members responded 204 in 0.1072 ms
+2026-06-07 15:10:37.498 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members - 204 null null 0.327ms
+2026-06-07 15:10:37.509 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:10:37.510 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:10:37.510 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:10:37.512 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:10:37.512 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 1.885ms
+2026-06-07 15:10:37.512 +03:00 [INF] HTTP GET /api/members responded 200 in 2.1844 ms
+2026-06-07 15:10:37.512 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 2.5357ms
+2026-06-07 15:10:42.577 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:10:42.578 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:10:42.583 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:10:42.583 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 4.9243ms
+2026-06-07 15:10:42.583 +03:00 [INF] HTTP GET /api/members responded 200 in 5.1371 ms
+2026-06-07 15:10:42.583 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 5.7619ms
+2026-06-07 15:10:44.040 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members - null null
+2026-06-07 15:10:44.040 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:10:44.040 +03:00 [INF] HTTP OPTIONS /api/members responded 204 in 0.0756 ms
+2026-06-07 15:10:44.040 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members - 204 null null 0.2872ms
+2026-06-07 15:10:44.045 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:10:44.046 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:10:44.046 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:10:44.048 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:10:44.048 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 2.0129ms
+2026-06-07 15:10:44.048 +03:00 [INF] HTTP GET /api/members responded 200 in 2.3145 ms
+2026-06-07 15:10:44.048 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 2.6824ms
+2026-06-07 15:10:49.142 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:10:49.143 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:10:49.152 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:10:49.152 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 8.8724ms
+2026-06-07 15:10:49.152 +03:00 [INF] HTTP GET /api/members responded 200 in 9.1371 ms
+2026-06-07 15:10:49.152 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 10.8864ms
+2026-06-07 15:10:50.653 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members - null null
+2026-06-07 15:10:50.653 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:10:50.654 +03:00 [INF] HTTP OPTIONS /api/members responded 204 in 0.0891 ms
+2026-06-07 15:10:50.654 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members - 204 null null 0.3175ms
+2026-06-07 15:10:50.659 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:10:50.659 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:10:50.659 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:10:50.661 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:10:50.661 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 1.8631ms
+2026-06-07 15:10:50.661 +03:00 [INF] HTTP GET /api/members responded 200 in 2.1236 ms
+2026-06-07 15:10:50.661 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 2.3585ms
+2026-06-07 15:10:56.205 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:10:56.206 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:10:56.208 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:10:56.208 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 2.0255ms
+2026-06-07 15:10:56.208 +03:00 [INF] HTTP GET /api/members responded 200 in 2.3549 ms
+2026-06-07 15:10:56.208 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 3.0267ms
+2026-06-07 15:10:57.881 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members - null null
+2026-06-07 15:10:57.881 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:10:57.882 +03:00 [INF] HTTP OPTIONS /api/members responded 204 in 0.1302 ms
+2026-06-07 15:10:57.882 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members - 204 null null 0.5254ms
+2026-06-07 15:10:57.889 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:10:57.889 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:10:57.889 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:10:57.891 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:10:57.891 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 1.8091ms
+2026-06-07 15:10:57.891 +03:00 [INF] HTTP GET /api/members responded 200 in 2.1183 ms
+2026-06-07 15:10:57.891 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 2.4018ms
+2026-06-07 15:11:30.793 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/authors - application/json null
+2026-06-07 15:11:30.794 +03:00 [INF] Route matched with {action = "GetAll", controller = "Authors"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.AuthorsController (LibraryApp.Api).
+2026-06-07 15:11:30.794 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/categories - application/json null
+2026-06-07 15:11:30.794 +03:00 [INF] Route matched with {action = "GetAll", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.CategoriesController (LibraryApp.Api).
+2026-06-07 15:11:30.795 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - application/json null
+2026-06-07 15:11:30.795 +03:00 [INF] Route matched with {action = "Search", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(BookSearchQuery, System.Threading.CancellationToken) on controller BooksController (LibraryApp.Api).
+2026-06-07 15:11:30.796 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], LibraryApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:11:30.796 +03:00 [INF] Executed action LibraryApp.Api.Controllers.CategoriesController.GetAll (LibraryApp.Api) in 1.921ms
+2026-06-07 15:11:30.796 +03:00 [INF] HTTP GET /api/categories responded 200 in 2.1271 ms
+2026-06-07 15:11:30.797 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/categories - 200 null application/json; charset=utf-8 2.5617ms
+2026-06-07 15:11:30.797 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/loans/active - application/json null
+2026-06-07 15:11:30.797 +03:00 [INF] Route matched with {action = "GetActive", controller = "Loans"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActive(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.LoansController (LibraryApp.Api).
+2026-06-07 15:11:30.798 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.AuthorDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:11:30.798 +03:00 [INF] Executed action LibraryApp.Api.Controllers.AuthorsController.GetAll (LibraryApp.Api) in 3.7195ms
+2026-06-07 15:11:30.798 +03:00 [INF] HTTP GET /api/authors responded 200 in 4.2283 ms
+2026-06-07 15:11:30.798 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/authors - 200 null application/json; charset=utf-8 5.5361ms
+2026-06-07 15:11:30.801 +03:00 [INF] Executing OkObjectResult, writing value of type 'PagedResult`1[[BookDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:11:30.802 +03:00 [INF] Executed action BooksController.Search (LibraryApp.Api) in 6.279ms
+2026-06-07 15:11:30.802 +03:00 [INF] HTTP GET /api/books responded 200 in 6.7760 ms
+2026-06-07 15:11:30.803 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - 200 null application/json; charset=utf-8 8.0808ms
+2026-06-07 15:11:30.813 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.ActiveLoanDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:11:30.814 +03:00 [INF] Executed action LibraryApp.Api.Controllers.LoansController.GetActive (LibraryApp.Api) in 16.4994ms
+2026-06-07 15:11:30.814 +03:00 [INF] HTTP GET /api/loans/active responded 200 in 16.7470 ms
+2026-06-07 15:11:30.814 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/loans/active - 200 null application/json; charset=utf-8 17.0542ms
+2026-06-07 15:11:30.845 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:11:30.846 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:11:30.857 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:11:30.857 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 11.1111ms
+2026-06-07 15:11:30.857 +03:00 [INF] HTTP GET /api/members responded 200 in 11.3709 ms
+2026-06-07 15:11:30.857 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 11.7027ms
+2026-06-07 15:12:00.927 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:12:00.927 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:12:00.929 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:12:00.929 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 1.9744ms
+2026-06-07 15:12:00.929 +03:00 [INF] HTTP GET /api/members responded 200 in 2.2336 ms
+2026-06-07 15:12:00.930 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 2.5231ms
+2026-06-07 15:12:01.820 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members - null null
+2026-06-07 15:12:01.820 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:01.820 +03:00 [INF] HTTP OPTIONS /api/members responded 204 in 0.1119 ms
+2026-06-07 15:12:01.820 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members - 204 null null 0.3759ms
+2026-06-07 15:12:01.849 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:12:01.849 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:01.849 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:12:01.903 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:12:01.903 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 54.2735ms
+2026-06-07 15:12:01.904 +03:00 [INF] HTTP GET /api/members responded 200 in 54.5309 ms
+2026-06-07 15:12:01.904 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 54.7544ms
+2026-06-07 15:12:03.882 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members/1 - null null
+2026-06-07 15:12:03.882 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:03.882 +03:00 [INF] HTTP OPTIONS /api/members/1 responded 204 in 0.0749 ms
+2026-06-07 15:12:03.882 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members/1 - 204 null null 0.3286ms
+2026-06-07 15:12:03.895 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5112/api/members/1 - application/json null
+2026-06-07 15:12:03.895 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:03.895 +03:00 [INF] Route matched with {action = "Delete", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32, System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:12:03.919 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.Delete (LibraryApp.Api) in 24.0035ms
+2026-06-07 15:12:03.920 +03:00 [ERR] HTTP DELETE /api/members/1 responded 500 in 24.9027 ms
+ConflictException: Member ID 1 has active loans and cannot be deleted.
+   at LibraryApp.Data.Services.MemberService.DeleteAsync(Int32 memberId, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\Services\MemberService.cs:line 121
+   at LibraryApp.Api.Controllers.MembersController.Delete(Int32 id, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Api\Controllers\MembersController.cs:line 68
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-07 15:12:03.944 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5112/api/members/1 - 409 null application/problem+json 49.8393ms
+2026-06-07 15:12:13.290 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - null null
+2026-06-07 15:12:13.295 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:13.296 +03:00 [INF] HTTP OPTIONS /api/loans/active responded 204 in 1.4353 ms
+2026-06-07 15:12:13.296 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - 204 null null 6.003ms
+2026-06-07 15:12:13.313 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/loans/active - application/json null
+2026-06-07 15:12:13.315 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:13.315 +03:00 [INF] Route matched with {action = "GetActive", controller = "Loans"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActive(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.LoansController (LibraryApp.Api).
+2026-06-07 15:12:13.325 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.ActiveLoanDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:12:13.325 +03:00 [INF] Executed action LibraryApp.Api.Controllers.LoansController.GetActive (LibraryApp.Api) in 9.694ms
+2026-06-07 15:12:13.325 +03:00 [INF] HTTP GET /api/loans/active responded 200 in 10.4437 ms
+2026-06-07 15:12:13.325 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/loans/active - 200 null application/json; charset=utf-8 11.9693ms
+2026-06-07 15:12:20.139 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/loans/1003/return - null null
+2026-06-07 15:12:20.139 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:20.139 +03:00 [INF] HTTP OPTIONS /api/loans/1003/return responded 204 in 0.1018 ms
+2026-06-07 15:12:20.139 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/loans/1003/return - 204 null null 0.3751ms
+2026-06-07 15:12:20.144 +03:00 [INF] Request starting HTTP/1.1 PATCH http://localhost:5112/api/loans/1003/return - application/json 2
+2026-06-07 15:12:20.145 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:20.153 +03:00 [INF] Route matched with {action = "Return", controller = "Loans"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Return(Int32, System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.LoansController (LibraryApp.Api).
+2026-06-07 15:12:20.190 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-06-07 15:12:20.203 +03:00 [INF] Loan 1003 returned. Fine charged: ¤0.00
+2026-06-07 15:12:20.207 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-06-07 15:12:20.207 +03:00 [INF] Executed action LibraryApp.Api.Controllers.LoansController.Return (LibraryApp.Api) in 53.2069ms
+2026-06-07 15:12:20.207 +03:00 [INF] HTTP PATCH /api/loans/1003/return responded 204 in 62.0760 ms
+2026-06-07 15:12:20.207 +03:00 [INF] Request finished HTTP/1.1 PATCH http://localhost:5112/api/loans/1003/return - 204 null null 62.6212ms
+2026-06-07 15:12:20.222 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - null null
+2026-06-07 15:12:20.222 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:20.222 +03:00 [INF] HTTP OPTIONS /api/loans/active responded 204 in 0.1403 ms
+2026-06-07 15:12:20.222 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - 204 null null 0.4699ms
+2026-06-07 15:12:20.233 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/loans/active - application/json null
+2026-06-07 15:12:20.233 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:20.233 +03:00 [INF] Route matched with {action = "GetActive", controller = "Loans"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActive(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.LoansController (LibraryApp.Api).
+2026-06-07 15:12:20.236 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.ActiveLoanDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:12:20.236 +03:00 [INF] Executed action LibraryApp.Api.Controllers.LoansController.GetActive (LibraryApp.Api) in 2.7073ms
+2026-06-07 15:12:20.236 +03:00 [INF] HTTP GET /api/loans/active responded 200 in 3.0494 ms
+2026-06-07 15:12:20.236 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/loans/active - 200 null application/json; charset=utf-8 3.4077ms
+2026-06-07 15:12:21.932 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/loans/4/return - null null
+2026-06-07 15:12:21.932 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:21.932 +03:00 [INF] HTTP OPTIONS /api/loans/4/return responded 204 in 0.1505 ms
+2026-06-07 15:12:21.932 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/loans/4/return - 204 null null 0.4728ms
+2026-06-07 15:12:21.943 +03:00 [INF] Request starting HTTP/1.1 PATCH http://localhost:5112/api/loans/4/return - application/json 2
+2026-06-07 15:12:21.943 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:21.943 +03:00 [INF] Route matched with {action = "Return", controller = "Loans"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Return(Int32, System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.LoansController (LibraryApp.Api).
+2026-06-07 15:12:21.947 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-06-07 15:12:21.951 +03:00 [INF] Loan 4 returned. Fine charged: ¤0.00
+2026-06-07 15:12:21.952 +03:00 [INF] Executing StatusCodeResult, setting HTTP status code 204
+2026-06-07 15:12:21.952 +03:00 [INF] Executed action LibraryApp.Api.Controllers.LoansController.Return (LibraryApp.Api) in 8.5184ms
+2026-06-07 15:12:21.952 +03:00 [INF] HTTP PATCH /api/loans/4/return responded 204 in 8.7743 ms
+2026-06-07 15:12:21.952 +03:00 [INF] Request finished HTTP/1.1 PATCH http://localhost:5112/api/loans/4/return - 204 null null 9.286ms
+2026-06-07 15:12:21.962 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - null null
+2026-06-07 15:12:21.963 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:21.963 +03:00 [INF] HTTP OPTIONS /api/loans/active responded 204 in 0.2216 ms
+2026-06-07 15:12:21.963 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - 204 null null 0.7296ms
+2026-06-07 15:12:21.970 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/loans/active - application/json null
+2026-06-07 15:12:21.971 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:21.971 +03:00 [INF] Route matched with {action = "GetActive", controller = "Loans"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActive(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.LoansController (LibraryApp.Api).
+2026-06-07 15:12:21.976 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.ActiveLoanDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:12:21.976 +03:00 [INF] Executed action LibraryApp.Api.Controllers.LoansController.GetActive (LibraryApp.Api) in 4.6432ms
+2026-06-07 15:12:21.976 +03:00 [INF] HTTP GET /api/loans/active responded 200 in 5.2433 ms
+2026-06-07 15:12:21.976 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/loans/active - 200 null application/json; charset=utf-8 5.6138ms
+2026-06-07 15:12:22.713 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members - null null
+2026-06-07 15:12:22.713 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:22.713 +03:00 [INF] HTTP OPTIONS /api/members responded 204 in 0.0824 ms
+2026-06-07 15:12:22.713 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members - 204 null null 0.5621ms
+2026-06-07 15:12:22.721 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:12:22.721 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:22.722 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:12:22.723 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:12:22.724 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 1.9159ms
+2026-06-07 15:12:22.724 +03:00 [INF] HTTP GET /api/members responded 200 in 2.2480 ms
+2026-06-07 15:12:22.724 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 2.5361ms
+2026-06-07 15:12:24.776 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members/1 - null null
+2026-06-07 15:12:24.777 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:24.777 +03:00 [INF] HTTP OPTIONS /api/members/1 responded 204 in 0.0967 ms
+2026-06-07 15:12:24.777 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members/1 - 204 null null 0.4577ms
+2026-06-07 15:12:24.786 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5112/api/members/1 - application/json null
+2026-06-07 15:12:24.786 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:12:24.786 +03:00 [INF] Route matched with {action = "Delete", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32, System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:12:24.801 +03:00 [INF] Deleted member: MemberId=1
+2026-06-07 15:12:24.817 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-06-07 15:12:24.841 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'LibraryApp.Data.LibraryContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_Loans_Members". The conflict occurred in database "LibraryDb", table "dbo.Loans", column 'MemberId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:325b20f1-b0ea-4824-984d-5890be6edd57
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_Loans_Members". The conflict occurred in database "LibraryDb", table "dbo.Loans", column 'MemberId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:325b20f1-b0ea-4824-984d-5890be6edd57
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-07 15:12:24.849 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.Delete (LibraryApp.Api) in 63.4814ms
+2026-06-07 15:12:24.850 +03:00 [ERR] HTTP DELETE /api/members/1 responded 500 in 64.2133 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_Loans_Members". The conflict occurred in database "LibraryDb", table "dbo.Loans", column 'MemberId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:325b20f1-b0ea-4824-984d-5890be6edd57
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at UnitOfWork.CommitTransactionAsync(CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\UnitOfWork.cs:line 30
+   at LibraryApp.Data.Services.MemberService.DeleteAsync(Int32 memberId, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\Services\MemberService.cs:line 128
+   at LibraryApp.Data.Services.MemberService.DeleteAsync(Int32 memberId, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\Services\MemberService.cs:line 136
+   at LibraryApp.Api.Controllers.MembersController.Delete(Int32 id, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Api\Controllers\MembersController.cs:line 68
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-07 15:12:24.857 +03:00 [ERR] Unhandled exception on DELETE /api/members/1
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_Loans_Members". The conflict occurred in database "LibraryDb", table "dbo.Loans", column 'MemberId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:325b20f1-b0ea-4824-984d-5890be6edd57
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at UnitOfWork.CommitTransactionAsync(CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\UnitOfWork.cs:line 30
+   at LibraryApp.Data.Services.MemberService.DeleteAsync(Int32 memberId, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\Services\MemberService.cs:line 128
+   at LibraryApp.Data.Services.MemberService.DeleteAsync(Int32 memberId, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\Services\MemberService.cs:line 136
+   at LibraryApp.Api.Controllers.MembersController.Delete(Int32 id, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Api\Controllers\MembersController.cs:line 68
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at LibraryApp.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Api\Middleware\ExceptionMiddleware.cs:line 22
+2026-06-07 15:12:24.861 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5112/api/members/1 - 500 null application/problem+json 75.7685ms
+2026-06-07 15:13:03.791 +03:00 [INF] Now listening on: http://localhost:5112
+2026-06-07 15:13:03.834 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-07 15:13:03.836 +03:00 [INF] Hosting environment: Development
+2026-06-07 15:13:03.836 +03:00 [INF] Content root path: c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Api
+2026-06-07 15:16:15.114 +03:00 [INF] Now listening on: http://localhost:5112
+2026-06-07 15:16:15.165 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-07 15:16:15.166 +03:00 [INF] Hosting environment: Development
+2026-06-07 15:16:15.166 +03:00 [INF] Content root path: c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Api
+2026-06-07 15:16:19.981 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:16:20.085 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:16:23.173 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:16:23.278 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 3188.7872ms
+2026-06-07 15:16:23.286 +03:00 [INF] HTTP GET /api/members responded 200 in 3271.5296 ms
+2026-06-07 15:16:23.295 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 3317.2371ms
+2026-06-07 15:16:24.121 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members - null null
+2026-06-07 15:16:24.130 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:16:24.133 +03:00 [INF] HTTP OPTIONS /api/members responded 204 in 8.3503 ms
+2026-06-07 15:16:24.135 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members - 204 null null 15.0072ms
+2026-06-07 15:16:24.142 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:16:24.146 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:16:24.148 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:16:24.189 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:16:24.190 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 42.1059ms
+2026-06-07 15:16:24.191 +03:00 [INF] HTTP GET /api/members responded 200 in 45.8538 ms
+2026-06-07 15:16:24.191 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 49.281ms
+2026-06-07 15:16:26.428 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members/1 - null null
+2026-06-07 15:16:26.429 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:16:26.429 +03:00 [INF] HTTP OPTIONS /api/members/1 responded 204 in 0.2969 ms
+2026-06-07 15:16:26.429 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members/1 - 204 null null 0.9641ms
+2026-06-07 15:16:26.440 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5112/api/members/1 - application/json null
+2026-06-07 15:16:26.442 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:16:26.454 +03:00 [INF] Route matched with {action = "Delete", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32, System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:16:26.810 +03:00 [INF] Deleted member: MemberId=1
+2026-06-07 15:16:26.906 +03:00 [WRN] Savepoints are disabled because Multiple Active Result Sets (MARS) is enabled. If 'SaveChanges' fails, then the transaction cannot be automatically rolled back to a known clean state. Instead, the transaction should be rolled back by the application before retrying 'SaveChanges'. See https://go.microsoft.com/fwlink/?linkid=2149338 for more information and examples. To identify the code which triggers this warning, call 'ConfigureWarnings(w => w.Throw(SqlServerEventId.SavepointsDisabledBecauseOfMARS))'.
+2026-06-07 15:16:26.943 +03:00 [ERR] An exception occurred in the database while saving changes for context type 'LibraryApp.Data.LibraryContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_Loans_Members". The conflict occurred in database "LibraryDb", table "dbo.Loans", column 'MemberId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5f07baa8-c00c-48eb-bb04-8e49b03a1e68
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_Loans_Members". The conflict occurred in database "LibraryDb", table "dbo.Loans", column 'MemberId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5f07baa8-c00c-48eb-bb04-8e49b03a1e68
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-06-07 15:16:26.958 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.Delete (LibraryApp.Api) in 503.5798ms
+2026-06-07 15:16:26.958 +03:00 [ERR] HTTP DELETE /api/members/1 responded 500 in 516.9171 ms
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_Loans_Members". The conflict occurred in database "LibraryDb", table "dbo.Loans", column 'MemberId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5f07baa8-c00c-48eb-bb04-8e49b03a1e68
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at UnitOfWork.CommitTransactionAsync(CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\UnitOfWork.cs:line 30
+   at LibraryApp.Data.Services.MemberService.DeleteAsync(Int32 memberId, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\Services\MemberService.cs:line 128
+   at LibraryApp.Data.Services.MemberService.DeleteAsync(Int32 memberId, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\Services\MemberService.cs:line 136
+   at LibraryApp.Api.Controllers.MembersController.Delete(Int32 id, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Api\Controllers\MembersController.cs:line 68
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-07 15:16:27.008 +03:00 [ERR] Unhandled exception on DELETE /api/members/1
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): The DELETE statement conflicted with the REFERENCE constraint "FK_Loans_Members". The conflict occurred in database "LibraryDb", table "dbo.Loans", column 'MemberId'.
+   at Microsoft.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at Microsoft.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at Microsoft.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryHasMoreRows(Boolean& moreRows)
+   at Microsoft.Data.SqlClient.SqlDataReader.TryReadInternal(Boolean setTimeout, Boolean& more)
+   at Microsoft.Data.SqlClient.SqlDataReader.ReadAsyncExecute(Task task, Object state)
+   at Microsoft.Data.SqlClient.SqlDataReader.InvokeAsyncCall[T](SqlDataReaderBaseAsyncCallContext`1 context)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeResultSetWithRowsAffectedOnlyAsync(Int32 commandIndex, RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+ClientConnectionId:5f07baa8-c00c-48eb-bb04-8e49b03a1e68
+Error Number:547,State:0,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.AffectedCountModificationCommandBatch.ConsumeAsync(RelationalDataReader reader, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at UnitOfWork.CommitTransactionAsync(CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\UnitOfWork.cs:line 30
+   at LibraryApp.Data.Services.MemberService.DeleteAsync(Int32 memberId, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\Services\MemberService.cs:line 128
+   at LibraryApp.Data.Services.MemberService.DeleteAsync(Int32 memberId, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\Services\MemberService.cs:line 136
+   at LibraryApp.Api.Controllers.MembersController.Delete(Int32 id, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Api\Controllers\MembersController.cs:line 68
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at LibraryApp.Api.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext context) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Api\Middleware\ExceptionMiddleware.cs:line 22
+2026-06-07 15:16:27.031 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5112/api/members/1 - 500 null application/problem+json 591.4603ms
+2026-06-07 15:18:23.098 +03:00 [INF] Now listening on: http://localhost:5112
+2026-06-07 15:18:23.156 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-07 15:18:23.157 +03:00 [INF] Hosting environment: Development
+2026-06-07 15:18:23.157 +03:00 [INF] Content root path: c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Api
+2026-06-07 15:18:28.649 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:18:28.737 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:18:31.501 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:18:31.598 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 2857.6446ms
+2026-06-07 15:18:31.604 +03:00 [INF] HTTP GET /api/members responded 200 in 2921.2935 ms
+2026-06-07 15:18:31.617 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 2970.2701ms
+2026-06-07 15:18:32.394 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members - null null
+2026-06-07 15:18:32.402 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:18:32.405 +03:00 [INF] HTTP OPTIONS /api/members responded 204 in 7.3176 ms
+2026-06-07 15:18:32.406 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members - 204 null null 13.3014ms
+2026-06-07 15:18:32.422 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:18:32.425 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:18:32.427 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:18:32.466 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:18:32.468 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 40.2298ms
+2026-06-07 15:18:32.468 +03:00 [INF] HTTP GET /api/members responded 200 in 44.1167 ms
+2026-06-07 15:18:32.469 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 47.6107ms
+2026-06-07 15:18:34.916 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members/1 - null null
+2026-06-07 15:18:34.916 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:18:34.916 +03:00 [INF] HTTP OPTIONS /api/members/1 responded 204 in 0.2363 ms
+2026-06-07 15:18:34.916 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members/1 - 204 null null 0.869ms
+2026-06-07 15:18:34.924 +03:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:5112/api/members/1 - application/json null
+2026-06-07 15:18:34.926 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:18:34.937 +03:00 [INF] Route matched with {action = "Delete", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Delete(Int32, System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:18:35.158 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.Delete (LibraryApp.Api) in 220.7116ms
+2026-06-07 15:18:35.159 +03:00 [ERR] HTTP DELETE /api/members/1 responded 500 in 233.0795 ms
+ConflictException: Member ID 1 has existing loans and cannot be deleted.
+   at LibraryApp.Data.Services.MemberService.DeleteAsync(Int32 memberId, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Data\Services\MemberService.cs:line 121
+   at LibraryApp.Api.Controllers.MembersController.Delete(Int32 id, CancellationToken ct) in c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Api\Controllers\MembersController.cs:line 68
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+2026-06-07 15:18:35.206 +03:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:5112/api/members/1 - 409 null application/problem+json 281.3174ms
+2026-06-07 15:18:41.783 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/authors - null null
+2026-06-07 15:18:41.784 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:18:41.784 +03:00 [INF] HTTP OPTIONS /api/authors responded 204 in 0.2002 ms
+2026-06-07 15:18:41.784 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/authors - 204 null null 1.1387ms
+2026-06-07 15:18:41.786 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/categories - null null
+2026-06-07 15:18:41.787 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:18:41.787 +03:00 [INF] HTTP OPTIONS /api/categories responded 204 in 0.2927 ms
+2026-06-07 15:18:41.788 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/categories - 204 null null 1.1329ms
+2026-06-07 15:18:41.788 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/books?page=1&pageSize=20 - null null
+2026-06-07 15:18:41.788 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:18:41.788 +03:00 [INF] HTTP OPTIONS /api/books responded 204 in 0.2025 ms
+2026-06-07 15:18:41.789 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/books?page=1&pageSize=20 - 204 null null 0.6024ms
+2026-06-07 15:18:41.812 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/authors - application/json null
+2026-06-07 15:18:41.815 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:18:41.814 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/categories - application/json null
+2026-06-07 15:18:41.815 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:18:41.818 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - application/json null
+2026-06-07 15:18:41.822 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:18:41.827 +03:00 [INF] Route matched with {action = "GetAll", controller = "Authors"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.AuthorsController (LibraryApp.Api).
+2026-06-07 15:18:41.828 +03:00 [INF] Route matched with {action = "GetAll", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.CategoriesController (LibraryApp.Api).
+2026-06-07 15:18:41.847 +03:00 [INF] Route matched with {action = "Search", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(BookSearchQuery, System.Threading.CancellationToken) on controller BooksController (LibraryApp.Api).
+2026-06-07 15:18:41.876 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.AuthorDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:18:41.922 +03:00 [INF] Executed action LibraryApp.Api.Controllers.AuthorsController.GetAll (LibraryApp.Api) in 93.8027ms
+2026-06-07 15:18:41.922 +03:00 [INF] HTTP GET /api/authors responded 200 in 107.4905 ms
+2026-06-07 15:18:41.922 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/authors - 200 null application/json; charset=utf-8 110.0875ms
+2026-06-07 15:18:41.951 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], LibraryApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:18:41.965 +03:00 [INF] Executed action LibraryApp.Api.Controllers.CategoriesController.GetAll (LibraryApp.Api) in 135.9519ms
+2026-06-07 15:18:41.965 +03:00 [INF] HTTP GET /api/categories responded 200 in 150.0885 ms
+2026-06-07 15:18:41.992 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/categories - 200 null application/json; charset=utf-8 177.9444ms
+2026-06-07 15:18:42.016 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - null null
+2026-06-07 15:18:42.017 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:18:42.017 +03:00 [INF] HTTP OPTIONS /api/loans/active responded 204 in 0.3899 ms
+2026-06-07 15:18:42.017 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/loans/active - 204 null null 1.4654ms
+2026-06-07 15:18:42.027 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/loans/active - application/json null
+2026-06-07 15:18:42.030 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:18:42.039 +03:00 [INF] Route matched with {action = "GetActive", controller = "Loans"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActive(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.LoansController (LibraryApp.Api).
+2026-06-07 15:18:42.182 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-07 15:18:42.194 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.ActiveLoanDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:18:42.201 +03:00 [INF] Executed action LibraryApp.Api.Controllers.LoansController.GetActive (LibraryApp.Api) in 160.7626ms
+2026-06-07 15:18:42.201 +03:00 [INF] HTTP GET /api/loans/active responded 200 in 171.2723 ms
+2026-06-07 15:18:42.202 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/loans/active - 200 null application/json; charset=utf-8 174.4443ms
+2026-06-07 15:18:42.225 +03:00 [INF] Executing OkObjectResult, writing value of type 'PagedResult`1[[BookDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:18:42.234 +03:00 [INF] Executed action BooksController.Search (LibraryApp.Api) in 387.2162ms
+2026-06-07 15:18:42.234 +03:00 [INF] HTTP GET /api/books responded 200 in 412.6500 ms
+2026-06-07 15:18:42.235 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - 200 null application/json; charset=utf-8 417.0873ms
+2026-06-07 15:18:43.112 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members - null null
+2026-06-07 15:18:43.112 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:18:43.114 +03:00 [INF] HTTP OPTIONS /api/members responded 204 in 1.2234 ms
+2026-06-07 15:18:43.114 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members - 204 null null 2.4406ms
+2026-06-07 15:18:43.125 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:18:43.125 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:18:43.125 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:18:43.132 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:18:43.132 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 6.9433ms
+2026-06-07 15:18:43.133 +03:00 [INF] HTTP GET /api/members responded 200 in 7.5420 ms
+2026-06-07 15:18:43.133 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 7.9924ms
+2026-06-07 15:22:16.341 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:22:16.342 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:22:16.347 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:22:16.347 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 4.8985ms
+2026-06-07 15:22:16.347 +03:00 [INF] HTTP GET /api/members responded 200 in 5.4190 ms
+2026-06-07 15:22:16.348 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 6.054ms
+2026-06-07 15:22:17.463 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members - null null
+2026-06-07 15:22:17.464 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:22:17.464 +03:00 [INF] HTTP OPTIONS /api/members responded 204 in 0.3031 ms
+2026-06-07 15:22:17.470 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members - 204 null null 6.1291ms
+2026-06-07 15:22:17.472 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:22:17.472 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:22:17.472 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:22:17.476 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:22:17.476 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 3.8691ms
+2026-06-07 15:22:17.476 +03:00 [INF] HTTP GET /api/members responded 200 in 4.5741 ms
+2026-06-07 15:22:17.477 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 5.1291ms
+2026-06-07 15:22:41.308 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:22:41.309 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:22:41.319 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:22:41.320 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 9.3743ms
+2026-06-07 15:22:41.320 +03:00 [INF] HTTP GET /api/members responded 200 in 10.6967 ms
+2026-06-07 15:22:41.320 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 11.9097ms
+2026-06-07 15:22:41.330 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/loans/active - application/json null
+2026-06-07 15:22:41.330 +03:00 [INF] Route matched with {action = "GetActive", controller = "Loans"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetActive(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.LoansController (LibraryApp.Api).
+2026-06-07 15:22:41.335 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.ActiveLoanDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:22:41.335 +03:00 [INF] Executed action LibraryApp.Api.Controllers.LoansController.GetActive (LibraryApp.Api) in 4.8596ms
+2026-06-07 15:22:41.335 +03:00 [INF] HTTP GET /api/loans/active responded 200 in 5.2860 ms
+2026-06-07 15:22:41.336 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/loans/active - 200 null application/json; charset=utf-8 5.792ms
+2026-06-07 15:22:41.364 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/authors - application/json null
+2026-06-07 15:22:41.365 +03:00 [INF] Route matched with {action = "GetAll", controller = "Authors"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.AuthorsController (LibraryApp.Api).
+2026-06-07 15:22:41.366 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/categories - application/json null
+2026-06-07 15:22:41.368 +03:00 [INF] Route matched with {action = "GetAll", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.CategoriesController (LibraryApp.Api).
+2026-06-07 15:22:41.368 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - application/json null
+2026-06-07 15:22:41.369 +03:00 [INF] Route matched with {action = "Search", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(BookSearchQuery, System.Threading.CancellationToken) on controller BooksController (LibraryApp.Api).
+2026-06-07 15:22:41.376 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.AuthorDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:22:41.376 +03:00 [INF] Executed action LibraryApp.Api.Controllers.AuthorsController.GetAll (LibraryApp.Api) in 10.8008ms
+2026-06-07 15:22:41.376 +03:00 [INF] HTTP GET /api/authors responded 200 in 11.4602 ms
+2026-06-07 15:22:41.376 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/authors - 200 null application/json; charset=utf-8 12.2082ms
+2026-06-07 15:22:41.379 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], LibraryApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:22:41.380 +03:00 [INF] Executed action LibraryApp.Api.Controllers.CategoriesController.GetAll (LibraryApp.Api) in 11.9233ms
+2026-06-07 15:22:41.380 +03:00 [INF] HTTP GET /api/categories responded 200 in 13.4119 ms
+2026-06-07 15:22:41.380 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/categories - 200 null application/json; charset=utf-8 14.0835ms
+2026-06-07 15:22:41.386 +03:00 [INF] Executing OkObjectResult, writing value of type 'PagedResult`1[[BookDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:22:41.386 +03:00 [INF] Executed action BooksController.Search (LibraryApp.Api) in 16.956ms
+2026-06-07 15:22:41.386 +03:00 [INF] HTTP GET /api/books responded 200 in 17.7053 ms
+2026-06-07 15:22:41.386 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - 200 null application/json; charset=utf-8 18.8901ms
+2026-06-07 15:23:15.364 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members/2 - null null
+2026-06-07 15:23:15.365 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:23:15.366 +03:00 [INF] HTTP OPTIONS /api/members/2 responded 204 in 0.4379 ms
+2026-06-07 15:23:15.367 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members/2 - 204 null null 1.7919ms
+2026-06-07 15:23:15.372 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members/2 - application/json null
+2026-06-07 15:23:15.372 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:23:15.380 +03:00 [INF] Route matched with {action = "GetById", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetById(Int32, System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:23:15.387 +03:00 [INF] Executing OkObjectResult, writing value of type 'LibraryApp.Core.DTOs.MemberDto'.
+2026-06-07 15:23:15.387 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetById (LibraryApp.Api) in 7.1791ms
+2026-06-07 15:23:15.387 +03:00 [INF] HTTP GET /api/members/2 responded 200 in 15.0453 ms
+2026-06-07 15:23:15.388 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members/2 - 200 null application/json; charset=utf-8 15.62ms
+2026-06-07 15:23:17.091 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/members - null null
+2026-06-07 15:23:17.091 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:23:17.092 +03:00 [INF] HTTP OPTIONS /api/members responded 204 in 0.9875 ms
+2026-06-07 15:23:17.093 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/members - 204 null null 1.7691ms
+2026-06-07 15:23:17.104 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/members - application/json null
+2026-06-07 15:23:17.104 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:23:17.105 +03:00 [INF] Route matched with {action = "GetAll", controller = "Members"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.MembersController (LibraryApp.Api).
+2026-06-07 15:23:17.112 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.MemberDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:23:17.113 +03:00 [INF] Executed action LibraryApp.Api.Controllers.MembersController.GetAll (LibraryApp.Api) in 8.0168ms
+2026-06-07 15:23:17.114 +03:00 [INF] HTTP GET /api/members responded 200 in 9.3142 ms
+2026-06-07 15:23:17.115 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/members - 200 null application/json; charset=utf-8 10.076ms
+2026-06-07 15:23:18.707 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/authors - null null
+2026-06-07 15:23:18.707 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:23:18.707 +03:00 [INF] HTTP OPTIONS /api/authors responded 204 in 0.1948 ms
+2026-06-07 15:23:18.707 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/authors - 204 null null 0.6806ms
+2026-06-07 15:23:18.709 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/categories - null null
+2026-06-07 15:23:18.711 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:23:18.711 +03:00 [INF] HTTP OPTIONS /api/categories responded 204 in 0.3498 ms
+2026-06-07 15:23:18.711 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/categories - 204 null null 2.1704ms
+2026-06-07 15:23:18.712 +03:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:5112/api/books?page=1&pageSize=20 - null null
+2026-06-07 15:23:18.713 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:23:18.713 +03:00 [INF] HTTP OPTIONS /api/books responded 204 in 0.1228 ms
+2026-06-07 15:23:18.713 +03:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:5112/api/books?page=1&pageSize=20 - 204 null null 0.5944ms
+2026-06-07 15:23:18.719 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/authors - application/json null
+2026-06-07 15:23:18.719 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:23:18.719 +03:00 [INF] Route matched with {action = "GetAll", controller = "Authors"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.AuthorsController (LibraryApp.Api).
+2026-06-07 15:23:18.723 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/categories - application/json null
+2026-06-07 15:23:18.723 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:23:18.724 +03:00 [INF] Route matched with {action = "GetAll", controller = "Categories"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAll(System.Threading.CancellationToken) on controller LibraryApp.Api.Controllers.CategoriesController (LibraryApp.Api).
+2026-06-07 15:23:18.724 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - application/json null
+2026-06-07 15:23:18.724 +03:00 [INF] CORS policy execution successful.
+2026-06-07 15:23:18.724 +03:00 [INF] Route matched with {action = "Search", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Search(BookSearchQuery, System.Threading.CancellationToken) on controller BooksController (LibraryApp.Api).
+2026-06-07 15:23:18.730 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[LibraryApp.Core.DTOs.AuthorDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:23:18.730 +03:00 [INF] Executed action LibraryApp.Api.Controllers.AuthorsController.GetAll (LibraryApp.Api) in 10.5156ms
+2026-06-07 15:23:18.730 +03:00 [INF] HTTP GET /api/authors responded 200 in 11.2056 ms
+2026-06-07 15:23:18.730 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/authors - 200 null application/json; charset=utf-8 11.6052ms
+2026-06-07 15:23:18.736 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Collections.Generic.List`1[[<>f__AnonymousType1`2[[System.Int32, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], LibraryApp.Api, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:23:18.736 +03:00 [INF] Executed action LibraryApp.Api.Controllers.CategoriesController.GetAll (LibraryApp.Api) in 12.3026ms
+2026-06-07 15:23:18.736 +03:00 [INF] HTTP GET /api/categories responded 200 in 12.7730 ms
+2026-06-07 15:23:18.736 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/categories - 200 null application/json; charset=utf-8 13.1468ms
+2026-06-07 15:23:18.737 +03:00 [INF] Executing OkObjectResult, writing value of type 'PagedResult`1[[BookDto, LibraryApp.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-06-07 15:23:18.737 +03:00 [INF] Executed action BooksController.Search (LibraryApp.Api) in 12.2432ms
+2026-06-07 15:23:18.737 +03:00 [INF] HTTP GET /api/books responded 200 in 12.9948 ms
+2026-06-07 15:23:18.737 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5112/api/books?page=1&pageSize=20 - 200 null application/json; charset=utf-8 13.459ms

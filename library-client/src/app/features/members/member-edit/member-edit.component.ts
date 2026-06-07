@@ -74,11 +74,4 @@ export class MemberEditComponent implements OnInit, OnDestroy {
     }
     this.state.update(m.memberId, this.form.value as any);
   }
-
-  onDelete(): void {
-    const m = this.member();
-    if (!m) return;
-    if (!confirm('Delete this member? This action cannot be undone.')) return;
-    this.state.deleteMember(m.memberId);
-  }
 }

@@ -20,9 +20,4 @@ export class MemberListComponent implements OnInit {
   memberIdTrack(_: number, member: { memberId: number }): number {
     return member.memberId;
   }
-
-  onDelete(id: number): void {
-    if (!confirm('Delete this member? This action cannot be undone.')) return;
-    this.state.deleteMember(id);
-  }
 }

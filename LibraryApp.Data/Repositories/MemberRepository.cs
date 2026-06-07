@@ -128,8 +128,8 @@ public class MemberRepository : IMemberRepository
 
     public async Task UpdateAsync(int memberId, UpdateMemberCommand cmd, CancellationToken ct = default)
     {
-        SqlConnection connection = null;
-        SqlTransaction transaction = null;
+        SqlConnection? connection = null;
+        SqlTransaction? transaction = null;
 
         try
         {
@@ -177,19 +177,6 @@ public class MemberRepository : IMemberRepository
             transaction?.Dispose();
             connection?.Dispose();
         }
-    }
-
-    public async Task DeleteAsync(int memberId, CancellationToken ct = default)
-    {
-        var member = await _ctx.Members
-            .FirstOrDefaultAsync(m => m.MemberId == memberId, ct);
-
-        if (member == null)
-            throw new KeyNotFoundException($"Member with ID {memberId} not found.");
-
-        _ctx.Members.Remove(member);
-
-        _logger.LogInformation("Deleted member: MemberId={MemberId}", memberId);
     }
 
     private static void AddParameter(

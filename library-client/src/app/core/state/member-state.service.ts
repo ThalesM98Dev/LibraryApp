@@ -29,7 +29,7 @@ export class MemberStateService {
       finalize(() => this.isLoading.set(false)),
     ).subscribe({
       next: members => this.members.set(members),
-      error: err => this.errorMessage.set(err.message ?? 'Failed to load members'),
+      error: err => this.errorMessage.set(err.error?.title ?? err.error?.detail ?? 'Failed to load members'),
     });
   }
 
@@ -45,8 +45,7 @@ export class MemberStateService {
         this.router.navigate(['/members']);
       },
       error: err => {
-        this.createError.set(err.message ?? 'Failed to create member');
-        this.toastService.error('Failed to create member');
+        this.createError.set(err.error?.title ?? err.error?.detail ?? 'Failed to create member');
       },
     });
   }
@@ -63,25 +62,7 @@ export class MemberStateService {
         this.router.navigate(['/members']);
       },
       error: err => {
-        this.updateError.set(err.message ?? 'Failed to update member');
-        this.toastService.error('Failed to update member');
-      },
-    });
-  }
-
-  deleteMember(id: number): void {
-    this.isLoading.set(true);
-
-    this.memberService.delete(id).pipe(
-      finalize(() => this.isLoading.set(false)),
-    ).subscribe({
-      next: () => {
-        this.members.update(list => list.filter(m => m.memberId !== id));
-        this.toastService.success('Member deleted');
-      },
-      error: err => {
-        this.errorMessage.set(err.message ?? 'Failed to delete member');
-        this.toastService.error('Failed to delete member');
+        this.updateError.set(err.error?.title ?? err.error?.detail ?? 'Failed to update member');
       },
     });
   }
