@@ -1,0 +1,15 @@
+2026-06-02 15:32:00.347 +03:00 [INF] Now listening on: http://localhost:5112
+2026-06-02 15:32:00.395 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-06-02 15:32:00.396 +03:00 [INF] Hosting environment: Development
+2026-06-02 15:32:00.396 +03:00 [INF] Content root path: c:\Users\Thales\Desktop\netcore\LibraryApp\LibraryApp.Api
+2026-06-02 15:32:01.230 +03:00 [INF] Request starting HTTP/1.1 PUT http://localhost:5112/api/Books/2 - application/json 233
+2026-06-02 15:32:01.264 +03:00 [INF] CORS policy execution failed.
+2026-06-02 15:32:01.265 +03:00 [INF] Request origin http://localhost:5112 does not have permission to access the resource.
+2026-06-02 15:32:01.323 +03:00 [INF] Route matched with {action = "Update", controller = "Books"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Update(Int32, UpdateBookCommand, System.Threading.CancellationToken) on controller BooksController (LibraryApp.Api).
+2026-06-02 15:32:03.391 +03:00 [INF] Book 2 updated via raw SQL: 1 authors, 2 categories
+2026-06-02 15:32:03.443 +03:00 [INF] Book 2 'Nineteen Eighty-Four (Raw SQL Edition)' updated via raw SQL. Authors: [1]. Categories: [1, 3].
+2026-06-02 15:32:03.552 +03:00 [WRN] Compiling a query which loads related collections for more than one collection navigation, either via 'Include' or through projection, but no 'QuerySplittingBehavior' has been configured. By default, Entity Framework will use 'QuerySplittingBehavior.SingleQuery', which can potentially result in slow query performance. See https://go.microsoft.com/fwlink/?linkid=2134277 for more information. To identify the query that's triggering this warning call 'ConfigureWarnings(w => w.Throw(RelationalEventId.MultipleCollectionIncludeWarning))'.
+2026-06-02 15:32:03.588 +03:00 [INF] Executing OkObjectResult, writing value of type 'BookDto'.
+2026-06-02 15:32:03.616 +03:00 [INF] Executed action BooksController.Update (LibraryApp.Api) in 2288.1987ms
+2026-06-02 15:32:03.623 +03:00 [INF] HTTP PUT /api/Books/2 responded 200 in 2361.4920 ms
+2026-06-02 15:32:03.637 +03:00 [INF] Request finished HTTP/1.1 PUT http://localhost:5112/api/Books/2 - 200 null application/json; charset=utf-8 2407.7315ms

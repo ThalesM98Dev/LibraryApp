@@ -1,0 +1,88 @@
+<div class="page">
+  <header class="page-header">
+    <a routerLink="/books" class="back-link">← Back to Books</a>
+    @if (book(); as b) {
+      <a [routerLink]="['/books', b.bookId, 'edit']" class="btn-edit">✎ Edit Book</a>
+    }
+  </header>
+
+  @if (isLoading()) {
+    <div class="skeleton">
+      <div class="skeleton-hero"></div>
+      <div class="skeleton-body">
+        <div class="skeleton-line" style="width: 60%;"></div>
+        <div class="skeleton-line" style="width: 40%;"></div>
+        <div class="skeleton-line" style="width: 80%;"></div>
+        <div class="skeleton-line" style="width: 35%;"></div>
+      </div>
+    </div>
+  } @else if (errorMessage(); as msg) {
+    <div class="error-state">
+      <div class="error-icon">⚠️</div>
+      <p>{{ msg }}</p>
+      <button type="button" (click)="retry()" class="btn-retry">Try again</button>
+    </div>
+  } @else if (book(); as b) {
+    <div class="detail-card">
+      <div class="hero">
+        <div class="hero-cover" [style.background]="bookColor(b.bookId)">
+          <span class="hero-initial">{{ bookInitial(b.title) }}</span>
+        </div>
+        <div class="hero-info">
+          <h1>{{ b.title }}</h1>
+          <div class="hero-badges">
+            @if (b.availableCopies > 0) {
+              <span class="chip chip-avail">✓ {{ b.availableCopies }} available</span>
+            } @else {
+              <span class="chip chip-unavail">✗ Unavailable</span>
+            }
+            <span class="year-badge">{{ b.publicationYear }}</span>
+          </div>
+        </div>
+      </div>
+
+      @if (b.description) {
+        <section class="section">
+          <h2 class="section-title">Description</h2>
+          <p class="description-text">{{ b.description }}</p>
+        </section>
+      }
+
+      <section class="section">
+        <h2 class="section-title">Details</h2>
+        <div class="info-grid">
+          <div class="info-item">
+            <span class="info-label">ISBN</span>
+            <span class="info-value mono">{{ b.isbn }}</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Publication Year</span>
+            <span class="info-value">{{ b.publicationYear }}</span>
+          </div>
+          <div class="info-item">
+            <span class="info-label">Available Copies</span>
+            <span class="info-value">{{ b.availableCopies }}</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Authors</h2>
+        <div class="tag-list">
+          @for (author of b.authors; track author) {
+            <span class="tag tag-author">{{ author }}</span>
+          }
+        </div>
+      </section>
+
+      <section class="section">
+        <h2 class="section-title">Categories</h2>
+        <div class="tag-list">
+          @for (category of b.categories; track category) {
+            <span class="tag tag-category">{{ category }}</span>
+          }
+        </div>
+      </section>
+    </div>
+  }
+</div>

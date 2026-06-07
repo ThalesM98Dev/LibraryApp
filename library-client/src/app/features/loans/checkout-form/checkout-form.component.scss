@@ -1,0 +1,161 @@
+.card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgb(0 0 0 / 8%);
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #f0f2f4;
+
+  h2 {
+    margin: 0;
+    font-size: 0.9375rem;
+    font-weight: 700;
+  }
+}
+
+.card-icon {
+  font-size: 1.125rem;
+  line-height: 1;
+}
+
+.card-desc {
+  margin: 0.125rem 0 0;
+  font-size: 0.75rem;
+  color: #999;
+}
+
+.card-body {
+  padding: 1rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.875rem;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+
+  label {
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: #333;
+  }
+
+  input {
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-family: inherit;
+    transition: border-color 0.15s;
+    outline: none;
+
+    &:focus {
+      border-color: #1976d2;
+    }
+
+    &.is-invalid {
+      border-color: #c62828;
+    }
+
+    &::placeholder {
+      color: #bbb;
+    }
+  }
+}
+
+.field-error {
+  font-size: 0.75rem;
+  color: #c62828;
+}
+
+.required {
+  color: #c62828;
+}
+
+.msg {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8125rem;
+}
+
+.msg-error {
+  background: #fce8e8;
+  color: #a33;
+}
+
+.msg-success {
+  background: #e6f7ed;
+  color: #1a7d3a;
+}
+
+.msg-close {
+  margin-left: auto;
+  padding: 0;
+  border: none;
+  background: none;
+  font-size: 1.125rem;
+  cursor: pointer;
+  color: inherit;
+  opacity: 0.6;
+  line-height: 1;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.card-footer {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-top: 1px solid #f0f2f4;
+}
+
+.btn-primary {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  background: #1976d2;
+  color: #fff;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+
+  &:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  &:hover:not(:disabled) {
+    background: #1565c0;
+  }
+}
+
+.btn-secondary {
+  padding: 0.5rem 1rem;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: #fff;
+  color: #555;
+  font-size: 0.8125rem;
+  cursor: pointer;
+  transition: border-color 0.15s, color 0.15s;
+
+  &:hover {
+    border-color: #bbb;
+    color: #1a1a1a;
+  }
+}

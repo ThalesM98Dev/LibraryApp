@@ -1,0 +1,423 @@
+<div class="page-container">
+  <div class="page-header">
+    <div class="header-left">
+      <a routerLink="/books" class="back-link">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M12.5 15L7.5 10L12.5 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        Back to catalogue
+      </a>
+      <h1>Add new book</h1>
+      <p class="page-subtitle">Fill in the details below to add a new book to the library collection.</p>
+    </div>
+  </div>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="modern-form" novalidate>
+
+    <!-- Section: Basic Info -->
+    <div class="form-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M10 2L10 18M2 10L18 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <circle cx="10" cy="10" r="8" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Book details</h3>
+          <p>Basic information about the book</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="form-grid">
+          <div class="field">
+            <label for="isbn">ISBN <span class="required">*</span></label>
+            <div class="input-wrapper"
+                 [class.is-focused]="focusedField === 'isbn'"
+                 [class.has-error]="getError('isbn')"
+                 [class.is-valid]="isFieldValid('isbn') && !isbnChecking">
+              <div class="input-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <rect x="2" y="3" width="12" height="10" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+                  <line x1="4" y1="6" x2="7" y2="6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                  <line x1="4" y1="9" x2="6" y2="9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <input id="isbn" type="text" formControlName="isbn" maxlength="20" autocomplete="off"
+                     placeholder="e.g. 978-0-06-231609-7"
+                     (focus)="focusedField = 'isbn'" (blur)="focusedField = ''"
+                     aria-describedby="isbn-error isbn-hint"/>
+              <span *ngIf="isbnChecking" class="input-spinner" aria-label="Checking ISBN">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" class="spin">
+                  <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="2" stroke-dasharray="28" stroke-linecap="round"/>
+                </svg>
+              </span>
+              <span *ngIf="isFieldValid('isbn') && !isbnChecking" class="input-valid-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="7" fill="#10b981"/>
+                  <path d="M5 8L7 10L11 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </div>
+            <div class="field-footer">
+              <span id="isbn-error" class="field-error" *ngIf="getError('isbn')" role="alert">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                  <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/>
+                  <line x1="7" y1="4" x2="7" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                  <circle cx="7" cy="10" r="0.6" fill="currentColor"/>
+                </svg>
+                {{ getError('isbn') }}
+              </span>
+              <span id="isbn-hint" class="field-hint">Digits, hyphens, and X only</span>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="title">Title <span class="required">*</span></label>
+            <div class="input-wrapper"
+                 [class.is-focused]="focusedField === 'title'"
+                 [class.has-error]="getError('title')"
+                 [class.is-valid]="isFieldValid('title')">
+              <div class="input-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <path d="M2 12L4 4L6 12" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M3.5 8.5H4.5" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                  <path d="M10 3L12 13" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                  <path d="M14 11C14 11 13.5 12 12 12C10.5 12 10 11 10 11" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <input id="title" type="text" formControlName="title" maxlength="300"
+                     placeholder="Enter the full book title"
+                     (focus)="focusedField = 'title'" (blur)="focusedField = ''"
+                     aria-describedby="title-error"/>
+            </div>
+            <span id="title-error" class="field-error" *ngIf="getError('title')" role="alert">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/>
+                <line x1="7" y1="4" x2="7" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <circle cx="7" cy="10" r="0.6" fill="currentColor"/>
+              </svg>
+              {{ getError('title') }}
+            </span>
+          </div>
+
+          <div class="field">
+            <label for="pub-year">Publication year <span class="required">*</span></label>
+            <div class="input-wrapper"
+                 [class.is-focused]="focusedField === 'pubYear'"
+                 [class.has-error]="getError('publicationYear')"
+                 [class.is-valid]="isFieldValid('publicationYear')">
+              <div class="input-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <rect x="2" y="3" width="12" height="11" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+                  <line x1="2" y1="7" x2="14" y2="7" stroke="currentColor" stroke-width="1.2"/>
+                  <line x1="5" y1="1" x2="5" y2="4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                  <line x1="11" y1="1" x2="11" y2="4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <input id="pub-year" type="text" inputmode="numeric" pattern="\d*"
+                     formControlName="publicationYear"
+                     placeholder="e.g. 1954"
+                     (focus)="focusedField = 'pubYear'" (blur)="focusedField = ''"
+                     aria-describedby="year-error"/>
+            </div>
+            <span id="year-error" class="field-error" *ngIf="getError('publicationYear')" role="alert">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/>
+                <line x1="7" y1="4" x2="7" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <circle cx="7" cy="10" r="0.6" fill="currentColor"/>
+              </svg>
+              {{ getError('publicationYear') }}
+            </span>
+          </div>
+
+          <div class="field field-full">
+            <label for="description">Description</label>
+            <div class="input-wrapper"
+                 [class.is-focused]="focusedField === 'desc'"
+                 [class.has-error]="getError('description')">
+              <textarea id="description" formControlName="description" rows="4"
+                        placeholder="Write a brief summary or description of the book..."
+                        (focus)="focusedField = 'desc'" (blur)="focusedField = ''"
+                        [maxlength]="maxDescLen"></textarea>
+            </div>
+            <div class="field-footer">
+              <span class="field-error" *ngIf="getError('description')" role="alert">{{ getError('description') }}</span>
+              <span class="char-counter" [class.char-warn]="descriptionLength > descriptionWarnThreshold">
+                {{ descriptionLength }} / {{ maxDescLen }}
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Classification -->
+    <div class="form-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <path d="M4 4H16V16H4V4Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M4 8H16" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M10 8V16" stroke="currentColor" stroke-width="1.5"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Classification</h3>
+          <p>Authors and categories for the book</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="form-grid">
+          <div class="field field-full">
+            <label>Authors <span class="required">*</span></label>
+            <div class="multi-select-area" [class.has-error]="showChipGroupError('authorIds')">
+              <div class="selected-tags" *ngIf="(form.get('authorIds')?.value?.length ?? 0) > 0">
+                <div class="tag" *ngFor="let authorId of form.get('authorIds')?.value || []">
+                  <span class="tag-text">{{ getAuthorName(authorId) }}</span>
+                  <button type="button" class="tag-remove" (click)="toggleAuthor(authorId)" aria-label="Remove author">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M3 3L9 9M9 3L3 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="search-field">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/>
+                  <line x1="10.5" y1="10.5" x2="14" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <input type="text" placeholder="Search and select authors..."
+                       (input)="filterAuthors($event)"
+                       (focus)="showAuthorSuggestions = true"
+                       (blur)="hideAuthorSuggestions()"
+                       aria-label="Search authors"/>
+              </div>
+
+              <div class="suggestions-dropdown" *ngIf="showAuthorSuggestions && filteredAuthors.length > 0">
+                <div *ngFor="let author of filteredAuthors"
+                     class="suggestion-item"
+                     (mousedown)="toggleAuthor(author.authorId)"
+                     [class.selected]="isAuthorSelected(author.authorId)">
+                  <div class="avatar-placeholder">{{ author.fullName.charAt(0) }}</div>
+                  <span>{{ author.fullName }}</span>
+                  <svg *ngIf="isAuthorSelected(author.authorId)" class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <circle cx="8" cy="8" r="7" fill="#3b82f6"/>
+                    <path d="M5 8L7 10L11 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="suggestions-dropdown" *ngIf="showAuthorSuggestions && searchAuthorTerm && filteredAuthors.length === 0">
+                <div class="suggestion-empty">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/>
+                    <line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                  <span>No authors found</span>
+                </div>
+              </div>
+            </div>
+
+            <span class="field-error" *ngIf="getError('authorIds')" role="alert">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/>
+                <line x1="7" y1="4" x2="7" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <circle cx="7" cy="10" r="0.6" fill="currentColor"/>
+              </svg>
+              {{ getError('authorIds') }}
+            </span>
+            <span class="field-hint" *ngIf="(form.get('authorIds')?.value?.length ?? 0) > 0">
+              {{ (form.get('authorIds')?.value?.length ?? 0) }} author{{ (form.get('authorIds')?.value?.length ?? 0) === 1 ? '' : 's' }} selected
+            </span>
+          </div>
+
+          <div class="field field-full">
+            <label>Categories <span class="required">*</span></label>
+            <div class="multi-select-area" [class.has-error]="showChipGroupError('categoryIds')">
+              <div class="selected-tags" *ngIf="(form.get('categoryIds')?.value?.length ?? 0) > 0">
+                <div class="tag tag-category" *ngFor="let categoryId of form.get('categoryIds')?.value || []">
+                  <span class="tag-text">{{ getCategoryName(categoryId) }}</span>
+                  <button type="button" class="tag-remove" (click)="toggleCategory(categoryId)" aria-label="Remove category">
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
+                      <path d="M3 3L9 9M9 3L3 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="search-field">
+                <svg class="search-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"/>
+                  <line x1="10.5" y1="10.5" x2="14" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <input type="text" placeholder="Search and select categories..."
+                       (input)="filterCategories($event)"
+                       (focus)="showCategorySuggestions = true"
+                       (blur)="hideCategorySuggestions()"
+                       aria-label="Search categories"/>
+              </div>
+
+              <div class="suggestions-dropdown" *ngIf="showCategorySuggestions && filteredCategories.length > 0">
+                <div *ngFor="let category of filteredCategories"
+                     class="suggestion-item"
+                     (mousedown)="toggleCategory(category.categoryId)"
+                     [class.selected]="isCategorySelected(category.categoryId)">
+                  <div class="category-dot"></div>
+                  <span>{{ category.name }}</span>
+                  <svg *ngIf="isCategorySelected(category.categoryId)" class="check-icon" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <circle cx="8" cy="8" r="7" fill="#3b82f6"/>
+                    <path d="M5 8L7 10L11 6" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+
+              <div class="suggestions-dropdown" *ngIf="showCategorySuggestions && searchCategoryTerm && filteredCategories.length === 0">
+                <div class="suggestion-empty">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.5" stroke-dasharray="2 2"/>
+                    <line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                    <line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                  </svg>
+                  <span>No categories found</span>
+                </div>
+              </div>
+            </div>
+
+            <span class="field-error" *ngIf="getError('categoryIds')" role="alert">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                <circle cx="7" cy="7" r="6" stroke="currentColor" stroke-width="1.2"/>
+                <line x1="7" y1="4" x2="7" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                <circle cx="7" cy="10" r="0.6" fill="currentColor"/>
+              </svg>
+              {{ getError('categoryIds') }}
+            </span>
+            <span class="field-hint" *ngIf="(form.get('categoryIds')?.value?.length ?? 0) > 0">
+              {{ (form.get('categoryIds')?.value?.length ?? 0) }} categor{{ (form.get('categoryIds')?.value?.length ?? 0) === 1 ? 'y' : 'ies' }} selected
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Section: Inventory -->
+    <div class="form-card">
+      <div class="card-header">
+        <div class="card-icon">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+            <rect x="3" y="2" width="14" height="16" rx="2" stroke="currentColor" stroke-width="1.5"/>
+            <line x1="7" y1="6" x2="13" y2="6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="7" y1="10" x2="13" y2="10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="7" y1="14" x2="10" y2="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <h3>Inventory</h3>
+          <p>Stock and condition of the book copies</p>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="form-grid">
+          <div class="field">
+            <label for="copies">Initial copies <span class="required">*</span></label>
+            <div class="input-wrapper"
+                 [class.is-focused]="focusedField === 'copies'"
+                 [class.has-error]="getError('initialCopies')"
+                 [class.is-valid]="isFieldValid('initialCopies')">
+              <div class="input-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <rect x="3" y="2" width="10" height="12" rx="1.5" stroke="currentColor" stroke-width="1.2"/>
+                  <line x1="3" y1="5" x2="13" y2="5" stroke="currentColor" stroke-width="1.2"/>
+                  <line x1="6" y1="8" x2="10" y2="8" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                  <circle cx="8" cy="10" r="0.8" fill="currentColor"/>
+                </svg>
+              </div>
+              <input id="copies" type="number" formControlName="initialCopies" min="1" max="100"
+                     (focus)="focusedField = 'copies'" (blur)="focusedField = ''"
+                     aria-describedby="copies-error"/>
+            </div>
+            <span id="copies-error" class="field-error" *ngIf="getError('initialCopies')" role="alert">{{ getError('initialCopies') }}</span>
+          </div>
+
+          <div class="field">
+            <label for="condition">Condition <span class="required">*</span></label>
+            <div class="input-wrapper select-wrapper"
+                 [class.is-focused]="focusedField === 'condition'"
+                 [class.has-error]="getError('copyCondition')">
+              <div class="input-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                  <circle cx="8" cy="8" r="6" stroke="currentColor" stroke-width="1.2"/>
+                  <path d="M8 5V8L10 10" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <select id="condition" formControlName="copyCondition"
+                      (focus)="focusedField = 'condition'" (blur)="focusedField = ''">
+                <option value="" disabled>Select condition...</option>
+                <option *ngFor="let c of conditions" [value]="c">{{ c }}</option>
+              </select>
+              <svg class="select-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M3 5L6 8L9 5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <span class="field-error" *ngIf="getError('copyCondition')" role="alert">{{ getError('copyCondition') }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Messages -->
+    <div class="alert alert-error" *ngIf="state.createError()" role="alert">
+      <div class="alert-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <circle cx="10" cy="10" r="8" stroke="#ef4444" stroke-width="1.5"/>
+          <line x1="10" y1="6" x2="10" y2="11" stroke="#ef4444" stroke-width="1.5" stroke-linecap="round"/>
+          <circle cx="10" cy="14" r="0.8" fill="#ef4444"/>
+        </svg>
+      </div>
+      <div class="alert-content">
+        <strong>Error adding book</strong>
+        <p>{{ state.createError() }}</p>
+      </div>
+      <button type="button" class="alert-close" (click)="state.clearError()" aria-label="Dismiss error">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="alert alert-success" *ngIf="state.lastCreatedBookId()" role="alert">
+      <div class="alert-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <circle cx="10" cy="10" r="8" fill="#10b981"/>
+          <path d="M6 10L9 13L14 7" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="alert-content">
+        <strong>Book added successfully!</strong>
+        <p>The book has been added to the library collection.</p>
+      </div>
+      <button type="button" class="alert-close" (click)="onSubmitSuccess()" aria-label="Dismiss success">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+          <path d="M4 4L12 12M12 4L4 12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Actions -->
+    <div class="form-actions">
+      <button type="button" class="btn-ghost" (click)="onCancel()">
+        Cancel
+      </button>
+      <button type="submit" class="btn-submit" [disabled]="state.isCreating()" [class.is-loading]="state.isCreating()">
+        <svg *ngIf="!state.isCreating()" width="18" height="18" viewBox="0 0 18 18" fill="none">
+          <path d="M9 3V15M3 9H15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span class="spinner" *ngIf="state.isCreating()"></span>
+        {{ state.isCreating() ? 'Adding book...' : 'Add book to library' }}
+      </button>
+    </div>
+
+  </form>
+</div>

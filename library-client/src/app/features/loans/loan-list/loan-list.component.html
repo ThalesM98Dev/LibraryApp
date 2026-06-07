@@ -1,0 +1,81 @@
+<div class="card">
+  <div class="card-header">
+    <span class="card-icon">📋</span>
+    <h2>Active Loans</h2>
+  </div>
+
+  @if (state.isLoading()) {
+    <div class="card-body">
+      <div class="skeleton">
+        <div class="skeleton-line" style="width: 100%;"></div>
+        <div class="skeleton-line" style="width: 85%;"></div>
+        <div class="skeleton-line" style="width: 70%;"></div>
+      </div>
+    </div>
+  } @else if (state.errorMessage(); as err) {
+    <div class="card-body">
+      <div class="msg msg-error">
+        <span>⚠️</span>
+        <span>{{ err }}</span>
+        <button type="button" class="msg-close" (click)="state.clearError()">×</button>
+      </div>
+    </div>
+  } @else if (state.activeLoans().length === 0) {
+    <div class="card-body">
+      <div class="empty-state">
+        <div class="empty-icon">📚</div>
+        <p>No active loans at the moment.</p>
+        <p class="empty-hint">All books are currently available.</p>
+      </div>
+    </div>
+  } @else {
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Member</th>
+            <th>Book</th>
+            <th>Author</th>
+            <th>Due Date</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (loan of state.activeLoans(); track loan.loanId) {
+            <tr [class.tr-overdue]="loan.isOverdue"
+                [class.tr-soon]="loan.daysUntilDue <= 2 && !loan.isOverdue">
+              <td class="col-member">{{ loan.memberName }}</td>
+              <td class="col-book">
+                <div class="book-title">{{ loan.bookTitle }}</div>
+                <span class="book-isbn">{{ loan.bookIsbn }}</span>
+              </td>
+              <td class="col-author">{{ loan.authorName }}</td>
+              <td class="col-due">
+                <div>{{ loan.dueDate | date:'mediumDate' }}</div>
+                @if (!loan.isOverdue) {
+                  <span class="due-count">{{ loan.daysUntilDue }} day{{ loan.daysUntilDue !== 1 ? 's' : '' }} left</span>
+                }
+              </td>
+              <td class="col-status">
+                @if (loan.isOverdue) {
+                  <span class="chip chip-danger">Overdue</span>
+                } @else if (loan.daysUntilDue <= 2) {
+                  <span class="chip chip-warning">Due Soon</span>
+                } @else {
+                  <span class="chip chip-active">Active</span>
+                }
+              </td>
+              <td class="col-actions">
+                <button type="button" (click)="onReturn(loan.loanId)"
+                        class="btn-return" [disabled]="state.isLoading()">
+                  Return
+                </button>
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+</div>

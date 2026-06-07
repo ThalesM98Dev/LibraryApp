@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="LibraryApp.Api/LibraryApp.Api.csproj" />
+  <Project Path="LibraryApp.Core/LibraryApp.Core.csproj" />
+  <Project Path="LibraryApp.Data/LibraryApp.Data.csproj" />
+</Solution>

@@ -1,0 +1,70 @@
+@if (isLoadingMember()) {
+  <div class="spinner">Loading member...</div>
+} @else if (loadError()) {
+  <div class="error-card">
+    <p class="error-message">{{ loadError() }}</p>
+    <a routerLink="/members" class="btn-secondary">Back to Members</a>
+  </div>
+} @else if (member()) {
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="member-form" novalidate>
+    <h3>Edit Member</h3>
+    <p class="form-description">Update member information.</p>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="fullName">Full Name <span class="required">*</span></label>
+        <input id="fullName" type="text" formControlName="fullName" placeholder="Enter full name"
+               [class.is-invalid]="form.get('fullName')?.invalid && form.get('fullName')?.touched" />
+        <span class="form-error" *ngIf="form.get('fullName')?.invalid && form.get('fullName')?.touched" role="alert">
+          Full name is required.
+        </span>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="email">Email <span class="required">*</span></label>
+        <input id="email" type="email" formControlName="email" placeholder="Enter email address"
+               [class.is-invalid]="form.get('email')?.invalid && form.get('email')?.touched" />
+        <span class="form-error" *ngIf="form.get('email')?.invalid && form.get('email')?.touched" role="alert">
+          {{ form.get('email')?.errors?.['required'] ? 'Email is required.' : 'Enter a valid email address.' }}
+        </span>
+      </div>
+    </div>
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="status">Status <span class="required">*</span></label>
+        <select id="status" formControlName="status"
+                [class.is-invalid]="form.get('status')?.invalid && form.get('status')?.touched">
+          <option value="Active">Active</option>
+          <option value="Suspended">Suspended</option>
+          <option value="Expired">Expired</option>
+        </select>
+        <span class="form-error" *ngIf="form.get('status')?.invalid && form.get('status')?.touched" role="alert">
+          Status is required.
+        </span>
+      </div>
+    </div>
+
+    <div class="form-error" *ngIf="state.updateError()" role="alert">
+      {{ state.updateError() }}
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" [disabled]="form.invalid || state.isUpdating()" class="btn-primary">
+        @if (state.isUpdating()) {
+          <span class="button-loading">Updating...</span>
+        } @else {
+          Save Changes
+        }
+      </button>
+      <a routerLink="/members" class="btn-secondary">Cancel</a>
+      <button type="button" class="btn-delete" (click)="onDelete()" [disabled]="state.isLoading()">
+        Delete Member
+      </button>
+    </div>
+  </form>
+} @else {
+  <div class="error">Member not found.</div>
+}

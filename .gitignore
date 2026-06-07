@@ -1,0 +1,15 @@
+# IDE
+.vs/
+.vscode/
+
+# Build
+bin/
+obj/
+
+# OS
+Thumbs.db
+.DS_Store
+
+# User-specific
+*.user
+*.suo

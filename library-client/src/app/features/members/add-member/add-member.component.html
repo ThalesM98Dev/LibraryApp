@@ -1,0 +1,41 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="member-form" novalidate>
+  <h3>Add Member</h3>
+  <p class="form-description">Register a new library member.</p>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="fullName">Full Name <span class="required">*</span></label>
+      <input id="fullName" type="text" formControlName="fullName" placeholder="Enter full name"
+             [class.is-invalid]="form.get('fullName')?.invalid && form.get('fullName')?.touched" />
+      <span class="form-error" *ngIf="form.get('fullName')?.invalid && form.get('fullName')?.touched" role="alert">
+        Full name is required.
+      </span>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-group">
+      <label for="email">Email <span class="required">*</span></label>
+      <input id="email" type="email" formControlName="email" placeholder="Enter email address"
+             [class.is-invalid]="form.get('email')?.invalid && form.get('email')?.touched" />
+      <span class="form-error" *ngIf="form.get('email')?.invalid && form.get('email')?.touched" role="alert">
+        {{ form.get('email')?.errors?.['required'] ? 'Email is required.' : 'Enter a valid email address.' }}
+      </span>
+    </div>
+  </div>
+
+  <div class="form-error" *ngIf="state.createError()" role="alert">
+    {{ state.createError() }}
+  </div>
+
+  <div class="form-actions">
+    <button type="submit" [disabled]="form.invalid || state.isCreating()" class="btn-primary">
+      @if (state.isCreating()) {
+        <span class="button-loading">Creating...</span>
+      } @else {
+        Create Member
+      }
+    </button>
+    <a routerLink="/members" class="btn-secondary">Cancel</a>
+  </div>
+</form>

@@ -1,0 +1,11 @@
+<div class="toast" role="alert" aria-live="polite" aria-atomic="true">
+  <div class="toast-header">
+    <span class="toast-icon" [class]="getIconClass()"></span>
+    <strong class="me-auto toast-title">{{ title }}</strong>
+    <small>{{ timestamp | date:'shortTime' }}</small>
+    <button type="button" class="btn-close" aria-label="Close" (click)="close()"></button>
+  </div>
+  <div class="toast-body">
+    {{ message }}
+  </div>
+</div>

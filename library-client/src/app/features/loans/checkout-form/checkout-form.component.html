@@ -1,0 +1,58 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" class="card" novalidate>
+  <div class="card-header">
+    <span class="card-icon">📖</span>
+    <div>
+      <h2>Check Out</h2>
+      <p class="card-desc">Enter member and book IDs to loan a book.</p>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <div class="field">
+      <label for="memberId">Member ID <span class="required">*</span></label>
+      <input id="memberId" type="number" formControlName="memberId" placeholder="e.g. 42"
+             inputmode="numeric"
+             [class.is-invalid]="form.get('memberId')?.invalid && form.get('memberId')?.touched" />
+      @if (form.get('memberId')?.invalid && form.get('memberId')?.touched) {
+        <span class="field-error">Member ID is required.</span>
+      }
+    </div>
+
+    <div class="field">
+      <label for="bookId">Book ID <span class="required">*</span></label>
+      <input id="bookId" type="number" formControlName="bookId" placeholder="e.g. 17"
+             inputmode="numeric"
+             [class.is-invalid]="form.get('bookId')?.invalid && form.get('bookId')?.touched" />
+      @if (form.get('bookId')?.invalid && form.get('bookId')?.touched) {
+        <span class="field-error">Book ID is required.</span>
+      }
+    </div>
+
+    @if (errorMessage(); as msg) {
+      <div class="msg msg-error">
+        <span>❌</span>
+        <span>{{ msg }}</span>
+        <button type="button" class="msg-close" (click)="clearError()">×</button>
+      </div>
+    }
+
+    @if (successMessage(); as msg) {
+      <div class="msg msg-success">
+        <span>✅</span>
+        <span>{{ msg }}</span>
+        <button type="button" class="msg-close" (click)="clearSuccess()">×</button>
+      </div>
+    }
+  </div>
+
+  <div class="card-footer">
+    <button type="submit" [disabled]="form.invalid || isSubmitting()" class="btn-primary">
+      @if (isSubmitting()) {
+        Processing…
+      } @else {
+        Check Out
+      }
+    </button>
+    <button type="button" class="btn-secondary" (click)="onReset()">Clear</button>
+  </div>
+</form>

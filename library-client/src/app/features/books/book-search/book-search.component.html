@@ -1,0 +1,117 @@
+<div class="page">
+  <header class="page-header">
+    <div>
+      <h1>Books</h1>
+      @if (state.results(); as result) {
+        <p class="result-count">{{ result.totalCount }} book{{ result.totalCount !== 1 ? 's' : '' }}</p>
+      }
+    </div>
+    <a routerLink="add" class="btn-primary">+ Add Book</a>
+  </header>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" class="search-bar" novalidate>
+    <div class="search-fields">
+      <div class="field">
+        <span class="field-icon">🔍</span>
+        <input id="title" type="text" formControlName="title" placeholder="Search by title..."
+               aria-label="Search by title" />
+      </div>
+      <div class="field">
+        <span class="field-icon">✏️</span>
+        <input id="authorName" type="text" formControlName="authorName" placeholder="Search by author..."
+               aria-label="Search by author" />
+      </div>
+      <div class="field field-select">
+        <span class="field-icon">📁</span>
+        <select id="categoryId" formControlName="categoryId" aria-label="Filter by category">
+          <option [ngValue]="null">All categories</option>
+          @for (cat of categories(); track cat.categoryId) {
+            <option [ngValue]="cat.categoryId">{{ cat.name }}</option>
+          }
+        </select>
+      </div>
+    </div>
+    <div class="search-actions">
+      <button type="submit" [disabled]="state.isLoading()" class="btn-search">Search</button>
+      <button type="button" (click)="form.reset(); search(1)" class="btn-clear">Clear</button>
+    </div>
+  </form>
+
+  <div class="spinner" [hidden]="!state.isLoading()" aria-label="Loading">
+    <div class="skeleton-loader"></div>
+    <div class="skeleton-loader" style="width: 70%; margin-top: 8px;"></div>
+    <div class="skeleton-loader" style="width: 50%; margin-top: 8px;"></div>
+  </div>
+
+  <div class="error" [hidden]="!state.errorMessage()" role="alert">
+    <strong>Error:</strong> {{ state.errorMessage() }}
+    <button type="button" class="close-error" (click)="state.clearError()">×</button>
+  </div>
+
+  @if (state.results(); as result) {
+    @if (result.items.length === 0 && !state.isLoading()) {
+      <div class="empty-state">
+        <div class="empty-icon">🔍</div>
+        <p>No books match your search.</p>
+        <p class="empty-hint">Try different keywords or clear filters.</p>
+      </div>
+    }
+
+    <div class="table-wrap" [hidden]="state.isLoading() || result.items.length === 0">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Title</th>
+            <th>ISBN</th>
+            <th>Year</th>
+            <th>Author</th>
+            <th>Category</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (book of result.items; track trackByBookId($index, book)) {
+            <tr>
+              <td class="col-initial">
+                <span class="book-initial" [style.background]="'hsl(' + (book.bookId * 37 % 360) + ', 50%, 75%)'">
+                  {{ bookInitial(book.title) }}
+                </span>
+              </td>
+              <td class="col-title">
+                <a [routerLink]="['/books', book.bookId]" class="title-link">{{ book.title }}</a>
+              </td>
+              <td class="col-isbn">{{ book.isbn }}</td>
+              <td class="col-year">{{ book.publicationYear }}</td>
+              <td class="col-authors">{{ book.authors.join(', ') }}</td>
+              <td class="col-cats">{{ book.categories.join(', ') }}</td>
+              <td class="col-status">
+                @if (book.availableCopies > 0) {
+                  <span class="chip chip-avail">✓ {{ book.availableCopies }} available</span>
+                } @else {
+                  <span class="chip chip-unavail">✗ Unavailable</span>
+                }
+              </td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    <div class="pagination" [hidden]="state.isLoading() || result.totalCount <= result.pageSize" aria-label="Pagination">
+      <button type="button" (click)="onPageChange(result.page - 1)" [disabled]="result.page <= 1" class="btn-page"
+              aria-label="Previous page">‹</button>
+      @for (p of pageNumbers(result.page, totalPages(result)); track p) {
+        @if (p === '...') {
+          <span class="page-ellipsis">…</span>
+        } @else {
+          <button type="button" (click)="onPageChange(p)" [class.active]="p === result.page" class="btn-page btn-page-num">
+            {{ p }}
+          </button>
+        }
+      }
+      <button type="button" (click)="onPageChange(result.page + 1)" [disabled]="result.page >= totalPages(result)"
+              class="btn-page" aria-label="Next page">›</button>
+    </div>
+  }
+</div>

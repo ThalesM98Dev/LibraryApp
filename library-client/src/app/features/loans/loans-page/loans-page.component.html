@@ -1,0 +1,26 @@
+<div class="page">
+  <header class="page-header">
+    <div>
+      <h1>Loans</h1>
+      <p class="page-subtitle">
+        <span>{{ state.totalActive() }} active loan{{ state.totalActive() !== 1 ? 's' : '' }}</span>
+        @if (state.overdueCount(); as overdue) {
+          <span class="subtitle-sep">·</span>
+          <span class="count-danger">{{ overdue }} overdue</span>
+        }
+      </p>
+    </div>
+    <button type="button" class="btn-export" (click)="onExport()" [disabled]="state.exporting()">
+      @if (state.exporting()) {
+        Exporting…
+      } @else {
+        ⬇ Export CSV
+      }
+    </button>
+  </header>
+
+  <div class="loans-grid">
+    <app-checkout-form />
+    <app-loan-list />
+  </div>
+</div>

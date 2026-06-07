@@ -1,0 +1,21 @@
+<header class="app-header">
+  <h1>Library</h1>
+  <nav>
+    <a routerLink="/loans" routerLinkActive="active">Loans</a>
+    <a routerLink="/books" routerLinkActive="active">Books</a>
+    <a routerLink="/members" routerLinkActive="active">Members</a>
+  </nav>
+</header>
+
+<main id="main-content" class="app-main">
+  <router-outlet />
+</main>
+
+<!-- Toast Container -->
+<div class="toast-container">
+  <app-toast *ngFor="let toast of toastService.toasts()" 
+             [title]="toast.title"
+             [message]="toast.message"
+             [type]="toast.type">
+  </app-toast>
+</div>

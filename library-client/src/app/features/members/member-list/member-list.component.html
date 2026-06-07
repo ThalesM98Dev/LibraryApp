@@ -1,0 +1,57 @@
+<div class="member-card">
+  <div class="header">
+    <h2>Members</h2>
+    <a routerLink="/members/add" class="btn-primary">Add Member</a>
+  </div>
+
+  <div class="spinner" [hidden]="!state.isLoading()" aria-label="Loading members">
+    <div class="skeleton-loader" style="height: 20px; width: 100px; margin-bottom: 8px;"></div>
+    <div class="skeleton-loader" style="height: 20px; width: 80px; margin-bottom: 8px;"></div>
+    <div class="skeleton-loader" style="height: 20px; width: 100px; margin-bottom: 8px;"></div>
+    <div class="skeleton-loader" style="height: 20px; width: 120px; margin-bottom: 8px;"></div>
+    <div class="skeleton-loader" style="height: 20px; width: 80px; margin-bottom: 8px;"></div>
+    <div class="skeleton-loader" style="height: 20px; width: 60px; margin-bottom: 8px;"></div>
+    Loading...
+  </div>
+
+  <div class="error" [hidden]="!state.errorMessage()" role="alert">
+    <strong>Error:</strong> {{ state.errorMessage() }}
+    <button type="button" class="close-error" (click)="state.clearError()">×</button>
+  </div>
+
+  @if (state.members().length === 0 && !state.isLoading()) {
+    <div class="empty-state">
+      <div class="empty-state-icon">👤</div>
+      <p>No members registered yet.</p>
+      <p>Use the "Add Member" button to create the first member.</p>
+    </div>
+  }
+
+  <div class="table-responsive" [hidden]="state.isLoading() || state.members().length === 0">
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let member of state.members(); trackBy: memberIdTrack">
+          <td>{{ member.fullName }}</td>
+          <td>{{ member.email }}</td>
+          <td>
+            <span class="badge" [class.active]="member.status === 'Active'" [class.inactive]="member.status !== 'Active'">
+              {{ member.status }}
+            </span>
+          </td>
+          <td class="actions">
+            <a [routerLink]="['/members', member.memberId, 'edit']" class="btn-action btn-edit">Edit</a>
+            <button type="button" class="btn-action btn-delete" (click)="onDelete(member.memberId)">Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
